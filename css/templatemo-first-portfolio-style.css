@@ -44,7 +44,7 @@ body {
   height: 400px;
 }
 .mb{
-  margin-bottom: 40px;
+  margin-top: 140px;
 }
 /*---------------------------------------
   TYPOGRAPHY               
@@ -375,7 +375,7 @@ strong {
 }
 .navbar-toggler .navbar-toggler-icon {
   background: var(--white-color);
-  transition: background 10ms 300ms ease;
+  transition: background  10ms 300ms ease;
   display: block;
   width: 30px;
   height: 2px;
@@ -646,7 +646,7 @@ strong {
   border-radius: var(--border-radius-medium);
   display: block;
   width: 100%;
-  transform: rotate(10deg) translateY(80px);
+  transform: rotate(10deg) translateY(20px);
   transition: all ease 0.5s;
 }
 .projects-title {
