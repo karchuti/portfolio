@@ -1,747 +1,808 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <title>First Portfolio Bootstrap 5 Theme</title>
-    <!-- CSS FILES -->
+    <title>Igor's Porftolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
-
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-
-<body>
-    <section class="preloader">
-        <div class="spinner">
-            <span class="spinner-rotate"></span>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-    </section>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- <a href="index.html" class="navbar-brand mx-auto mx-lg-0">Igor Karchut</a> -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3">Hobbies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Qualifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_6">Experience</a>
-                    </li>
-                </ul>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Igor Karchut</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <!-- <a href="#service" class="nav-item nav-link">Services</a> -->
+            </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">Igor Karchut</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#hobbies" class="nav-item nav-link">Hobbies</a>
+                <!-- <a href="#team" class="nav-item nav-link">Team</a> -->
+                <!-- <a href="#testimonial" class="nav-item nav-link">Testimonial</a> -->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
-    <main>
-        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
-            <div class="container">
-                
-                <div class="row">
-                    <div class="col-lg-7 col-12">
-                        <div class="hero-text">
-                            <h1 class="hero-title ms-3 mb-0">Igor Karchut</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <section class="about section-padding" id="section_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <img src="images/profile-removebg-preview.png" class="about-image img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">About Me</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What is my goal?</h3>
-                            <p>I am a skilled and adaptable professional with a strong background in customer service,
-                                technical proficiency, and a passion for effective communication. My goal is to leverage
-                                my diverse skill set, including proficiency in Microsoft 365, customer service and
-                                project management to contribute to a dynamic and collaborative team. I am committed to
-                                delivering exceptional results, fostering positive customer experiences, and
-                                continuously seeking opportunities for growth and improvement. With a bilingual
-                                proficiency in English and Polish, I aim to excel in a role that values both technical
-                                expertise and communicative skills, enabling me to make a meaningful impact on projects
-                                and in customer interactions.</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="projects section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/pc.jpg" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Hobbies</h2>
-                        </div>
-                        <p>I am an avid enjoyer of thrilling experiences. So far, I have partaken in skydiving,
-                            quarry karting, caving, paintballing, go-carting and have plans for more experiences
-                            such as bungee jumping, rock climbing, etc. My repeat hobbies include athletics such as
-                            running and sprinting for the purpose of participating in airsoft with my friends. </p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">PC Building</h3>
-                            </div>
-                            <a href="images/pc-building.jpg" class="popup-image">
-                                <img src="images/pc-building.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Exploring</h3>
-                            </div>
-                            <a href="images/caving.jpg" class="popup-image">
-                                <img src="images/caving.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Climbing</h3>
-                            </div>
-                            <a href="images/climing.jpg" class="popup-image">
-                                <img src="images/climing.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Sky-Diving</h3>
-                            </div>
-                            <a href="images/skydive.PNG" class="popup-image">
-                                <img src="images/skydive.PNG" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Ziplining</h3>
-                            </div>
-                            <a href="images/zipline.jpg" class="popup-image">
-                                <img src="images/zipline.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Karting</h3>
-                            </div>
-                            <a href="images/quary karts.jpg" class="popup-image">
-                                <img src="images/quary karts.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Go-carting</h3>
-                            </div>
-                            <a href="images/go-carting.jpg" class="popup-image">
-                                <img src="images/go-carting.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Paintballing</h3>
-                            </div>
-                            <a href="images/paintballing.jpg" class="popup-image">
-                                <img src="images/paintballing.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Airsofting</h3>
-                            </div>
-                            <a href="images/airsoft.jpg" class="popup-image">
-                                <img src="images/airsoft.jpg" class="projects-image img-fluid ps" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="about section-padding" id="section_4">
-            <div class="container section-padding ">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/projects.jpg" class="avatar-image img-fluid ps" alt="">
-                            <h2 class="text-white ms-4 mb-0">Projects</h2>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">In Progress - Jet2 Holidays </h3>
-                            </div>
-                            <a
-                                href="https://www.figma.com/file/gTpymKQOZPmexcenhxRyPV/Jet2Breakdown?type=whiteboard&node-id=0%3A1&t=0hzJjrsWHX135FHQ-1">
-                                <img src="images/Capture.PNG" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">Improving jet2 Holidays Site</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What I'm improving:</h3>
-                            <p>Currently their website doesn't follow the trend of jobsites, it has lots of unused white space, many screens that slow down the process of applying and contains a duplicate portion for login in. Alongside that, its navigation is lacking and isn't aesthetically pleasing, neither is the look of the general site due to the variety of colours used incorrectly or for example the position of their logo that doesn't follow current trends.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">UX/UI Basics course</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What I Learnt:</h3>
-                            <p>I learnt principles of UX/UI and how to use them to make aesthetically pleasing wireframes and components that follow the modern standards.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Certificate of completion</h3>
-                            </div>
-                            <a href="images/UX-UI.jpg">
-                                <img src="images/UX-UI.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">certificate of completion</h3>
-                            </div>
-                            <a href="images/graph.PNG">
-                                <img src="images/graph.PNG" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">GraphQL Course</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What I learnt:</h3>
-                            <p>I learnt about the query language that graphQL is and how it can be used for hierarchical structure.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">Dissertation Webpage</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">How I created the page using UX:</h3>
-                            <p>Using a GitHub repository for version control, I created a codebase in visual studio code and created an informative webpage about datacentres operations, designs, and services.
-                                <br>
-                                <br>
-                                Furthermore, the website was made accessible using WCAG, CSS and JavaScript checkers.
-                                <br>
-                                <br>
-                                Finally, the page design uses UX principles to organize the content allowing for mental simplicity.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">Accessible informative webpage</h3>
-                            </div>
-                            <a href="https://karchuti.github.io/Disertation-Website/index.html">
-                                <img src="images/site.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">UX V2 Project</h3>
-                            </div>
-                            <a
-                                href="https://www.figma.com/file/ABL7CNY7CIrCUZXVBMWt7d/Prototype-of-app-of-phone?type=design&node-id=861%3A5187&mode=design&t=nw7yXjTPauwiJTvu-1">
-                                <img src="images/Product Overlay.png" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">2nd build for the UX project</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What we improved</h3>
-                            <p>Although not finished thoroughly as we came to the end of the project deadline, we add more aesthetically pleasing icons and components to improve the apps looks while keeping the UI improvements.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">1st build for the UX project</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What we built:</h3>
-                            <p>Created was an app with cleaner UI with appropriate language, more detailed onboarding and interactions designed for testing the flow of the app.
-                                <br>
-                                <br>
-                                We created this in Figma from our Miro board design stages using a kanban board methodology to divide up tasks.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">UX Project</h3>
-                            </div>
-                            <a
-                                href="https://www.figma.com/file/ABL7CNY7CIrCUZXVBMWt7d/Prototype-of-app-of-phone?type=design&node-id=0%3A1&mode=design&t=eOdckz42HkUC8o72-1">
-                                <img src="images/Scan Screen - A.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container section-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <h3 class="projects-title">UX Project Design Stages</h3>
-                            </div>
-                            <a href="https://miro.com/app/board/uXjVP-bSa9k=/?share_link_id=306691391939">
-                                <img src="images/TeamSprint.png" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <div class="section-title-wrap d-flex justify-content-end align-items-center mb-4">
-                                <h2 class="text-white me-4 mb-0">Design Stagees for the UX project</h2>
-                            </div>
-                            <h3 class="pt-2 mb-3">What we designed:</h3>
-                            <p>Using the ISO 9241-210 Lifecyle, we redesigned an app which could scan items and show you their environmental, business, and social impact. We started by empathising with the users by breaking down the app, looking for points of friction, recording numbers of clicks, transition screens and noting down concerns.
-                                <br>
-                                <br>
-                                Next came defining the problems, goals and a hypothesis which with we would use to check that the problems and goals were tackled.
-                                <br>
-                                <br>
-                                After, we diverged to create sketches of solutions to the set problem having taken inspiration from current design trends.
-                                <br>
-                                <br>
-                                We then converged using voting techniques like heatmapping and voting to decide on the best solutions for the problems.
-                                <br>
-                                <br>
-                                Having decided on the best solutions, we created a plan for the prototype, breaking down the solutions into easily displayed tasks on a kanban board and dividing up the responsibilities.
-                                <br>
-                                <br>
-                                Nearly finishing, we came to the testing for which we created test plans and instructions on how to perform the tests to result in unbiased or swayed result.
-                                <br>
-                                <br>
-                                Finishing, we created plans on what actions to take depending on the results we received from the testing for the next iteration of the app.                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects section-padding" id="section_5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/education.png" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Qualifications</h2>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">University of Chester</small>
-                                <h3 class="projects-title">2:2 Undergraduate Bachlors 1/2</h3>
-                            </div>
-                            <a href="images/Uni_p1.png" class="popup-image">
-                                <img src="images/Uni_p1.png" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">University of Chester</small>
-                                <h3 class="projects-title">2:2 Undergraduate Bachlors 2/2</h3>
-                            </div>
-                            <a href="images/Uni_p2.jpg" class="popup-image">
-                                <img src="images/Uni_p2.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Newcastle and Stafford Collages Group</small>
-                                <h3 class="projects-title">Level 3 Extended Diploma 1/3</h3>
-                            </div>
-                            <a href="images/College_p1.png" class="popup-image">
-                                <img src="images/College_p1.png" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Newcastle and Stafford Collages Group</small>
-                                <h3 class="projects-title">Level 3 Extended Diploma 2/3</h3>
-                            </div>
-                            <a href="images/College_p2.jpg" class="popup-image">
-                                <img src="images/College_p2.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Newcastle and Stafford Collages Group</small>
-                                <h3 class="projects-title">Level 3 Extended Diploma 3/3</h3>
-                            </div>
-                            <a href="images/College_p3.jpg" class="popup-image">
-                                <img src="images/College_p3.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Co-Operative Academy</small>
-                                <h3 class="projects-title">English</h3>
-                            </div>
-                            <a href="images/High_English-ProductDesign.jpg" class="popup-image">
-                                <img src="images/High_English-ProductDesign.jpg" class="projects-image img-fluid"
-                                    alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Co-Operative Academy</small>
-                                <h3 class="projects-title">Maths</h3>
-                            </div>
-                            <a href="images/High_Maths-IT-Science.jpg" class="popup-image">
-                                <img src="images/High_Maths-IT-Science.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Co-Operative Academy</small>
-                                <h3 class="projects-title">Polish</h3>
-                            </div>
-                            <a href="images/High_Polish.jpg" class="popup-image">
-                                <img src="images/High_Polish.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="clearfix"></div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Co-Operative Academy</small>
-                                <h3 class="projects-title">ECDL</h3>
-                            </div>
-                            <a href="images/ECDL.jpg" class="popup-image">
-                                <img src="images/ECDL.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Sporting Communities </small>
-                                <h3 class="projects-title">Level 2 Qualification</h3>
-                            </div>
-                            <a href="images/Volunterring_p1.jpg" class="popup-image">
-                                <img src="images/Volunterring_p1.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Derbshire Safeguarding Children's Board</small>
-                                <h3 class="projects-title">Safeguarding</h3>
-                            </div>
-                            <a href="images/Volunteering_p2.jpg" class="popup-image">
-                                <img src="images/Volunteering_p2.jpg" class="projects-image img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="projects section-padding" id="section_6">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/work.jpg" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Experience</h2>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="row mb">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/servest.png" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Atalian Servest Hospitality</h2>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <h3 class="pt-2 mb-3">Room Attendant January 2022-Present</h3>
-                            <p>• Cleaning and maintenance including sanitization, preparing room equipment, correct
-                                waste disposal.<br>
-                                • Organization and stocking involving tidying rooms and storage areas alongside ensuring
-                                good equipment stock levels and condition.<br>
-                                • Specialized cleaning involves managing delicate furnishings and valuables as well as
-                                performing deep cleaning tasks on a periodic basis.<br>
-                                • Guest services such as assisting with guest arrivals and departures whilst providing
-                                excellent customer service to guests.<br>
-                                • Identifying and reporting safety hazards and ensuring overall safety through following
-                                protocols and guidelines.<br>
-                                • Prioritizing tasks and managing time efficiently to allow for suitable time
-                                management.<br>
-                                • Communication between the guests and supervisors to escalate issues.<br>
-                                • Collaborating with fellow house keepers to support a well-functioning team.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="container">
-                <div class="row mb">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/currys.png" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Curry's</h2>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <h3 class="pt-2 mb-3">Sales Associate December 2021-January 2022</h3>
-                            <p>• Customer Assistance which involved assisting customers with queries, expertise and
-                                guiding them towards resolutions by using product knowledge.<br>
-                                • Sales involved upselling, promoting and cross selling relevant stock during the
-                                assistance and transaction processes.<br>
-                                • Adaptability between working on the store floor to assist customers, working tills to
-                                check out customers and deal with paperwork or claims as well as performing allocation
-                                duties to find user ordered stock in the storerooms.<br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <br>
-                <div class="row mb">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/tim.png" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Tim Hortons</h2>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-                            <h3 class="pt-2 mb-3">Store Team Member February 2020-April 2021</h3>
-                            <p>• Safety awareness due to working the night shifts alone in a remote location.<br>
-                                • Cleaning and sanitization of food storage areas to abide with health protocols.<br>
-                                • Organization and restocking of goods to provide product availability.<br>
-                                • Safely managing and securing large sums of currency collected from sales.<br>
-                                • Handling handoffs and paperwork to effectively work with the day shift team
-                                members.<br>
-                                • Authorization of fuel pumps which involved vigilantly identifying hazards and being
-                                ready to deal with safety issues such as smoking customers and dangers such as fuel
-                                leaks.<br>
-                                • Upselling, cross selling and promotion of goods to customers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <br>
-                <div class="row mb">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/EG.jpg" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">Euro Garages</h2>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-
-                            <h3 class="pt-2 mb-3">Store Team Member February 2020-April 2021</h3>
-                            <p>• Safety awareness due to working the night shifts alone in a remote location.<br>
-                                • Cleaning and sanitization of food storage areas to abide with health protocols.<br>
-                                • Organization and restocking of goods to provide product availability.<br>
-                                • Safely managing and securing large sums of currency collected from sales.<br>
-                                • Handling handoffs and paperwork to effectively work with the day shift team
-                                members.<br>
-                                • Authorization of fuel pumps which involved vigilantly identifying hazards and being
-                                ready to deal with safety issues such as smoking customers and dangers such as fuel
-                                leaks.<br>
-                                • Upselling, cross selling and promotion of goods to customers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <br>
-                <div class="row mb">
-                    <div class="col-lg-8 col-md-8 col-12 mx-auto">
-                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                            <img src="images/nulc.png" class="avatar-image img-fluid" alt="">
-                            <h2 class="text-white ms-4 mb-0">IT Technitian</h2>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-5 mt-lg-0">
-                        <div class="about-thumb">
-
-                            <h3 class="pt-2 mb-3">Store Team Member February 2020-April 2021</h3>
-                            <p>• Safety awareness due to working the night shifts alone in a remote location.<br>
-                                • Cleaning and sanitization of food storage areas to abide with health protocols.<br>
-                                • Organization and restocking of goods to provide product availability.<br>
-                                • Safely managing and securing large sums of currency collected from sales.<br>
-                                • Handling handoffs and paperwork to effectively work with the day shift team
-                                members.<br>
-                                • Authorization of fuel pumps which involved vigilantly identifying hazards and being
-                                ready to deal with safety issues such as smoking customers and dangers such as fuel
-                                leaks.<br>
-                                • Upselling, cross selling and promotion of goods to customers.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
         <div class="container">
-            <div class="row">
-                <ul class="navbar-nav ms-lg-5">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_3">Hobbies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_5">Qualifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_6">Experience</a>
-                    </li>
-                </ul>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">Igor Karchut</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Web Developer, App Developer, UX Designer, UI Desinger</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <!-- <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid padTop" src="img/About/profile-removebg-preview.png" alt="">
+                </div>
             </div>
         </div>
-    </footer>
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
-    <script src="js/custom.js"></script>
-</body>
+    </div>
+    <!-- Header End -->
+    <!-- Video Modal Start -->
+    <!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Video Modal End -->
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container dropshadow">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <!-- <h1 class="display-1 mb-0">Me</h1> -->
+                            <h2 class="mb-0 fw-bold">About Me</h2>
+                        </div>
+                        <!-- <h3 class="lh-base mb-0">Me</h3> -->
+                    </div>
+                    <p class="mb-4">I am a skilled and adaptable professional with a strong background in customer
+                        service, technical proficiency, and a passion for effective communication. My goal is to
+                        leverage my diverse skill set, including proficiency in Microsoft 365, customer service and
+                        project management to contribute to a dynamic and collaborative team. I am committed to
+                        delivering exceptional results, fostering positive customer experiences, and continuously
+                        seeking opportunities for growth and improvement. With a bilingual proficiency in English and
+                        Polish, I aim to excel in a role that values both technical expertise and communicative skills,
+                        enabling me to make a meaningful impact on projects and in customer interactions.</p>
+                    <!-- <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p> -->
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="mb-4">Skill Confidence</h3>
+                    <div class="row align-items-center">
+                        <div class="container-fluid">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Javascript</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">UX</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">UI</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/About/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/About/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                    </div>
+                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">1234</h2>
+                    </div>
+                    <p class="mb-0">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <h1 class="display-5 mb-5">Education & Experience</h1>
+                <div class="container-fluid wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
+                                href="#tab-1">Education</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
+                                href="#tab-2">Experience</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5 class="fst-italic">Undergraduate Bachlors 2:2</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2023</p>
+                                    <h6 class="mb-0 fst-italic">University of Chester</h6>
+                                    <ul>
+                                        <li>Mathmatics for Computing</li>
+                                        <li>Experiential Learning(Computing)</li>
+                                        <li>Computer Systems and Networks</li>
+                                        <li>Data Structures and Algorithms</li>
+                                        <li>Databases II</li>
+                                        <li>Programming II</li>
+                                        <li>Web Application Development</li>
+                                        <li>Innovation Project</li>
+                                        <li>System Analysis</li>
+                                        <li>Network Protocols and Methods</li>
+                                        <li>Design Thinking for Innovation</li>
+                                        <li>Programing III</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="fst-italic">Level 3 Extended Diploma D*D*D*</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2019</p>
+                                    <h6 class="mb-0 fst-italic">Newcastle and Stafford Collages Grouo</h6>
+                                    <ul>
+                                        <li>Computer Systems</li>
+                                        <li>Information Systems</li>
+                                        <li>Computer Networks</li>
+                                        <li>Event Driven Programming</li>
+                                        <li>Procedural Programming</li>
+                                        <li>Human Computer Interaction</li>
+                                        <li>Website Production</li>
+                                        <li>Spreadsheet Modelling</li>
+                                        <li>Software Design and Development</li>
+                                        <li>E-Commerce</li>
+                                        <li>System Analysis and Design</li>
+                                        <li>Database Design</li>
+                                        <li>Data Analysis and Design</li>
+                                        <li>Developing Computer Games</li>
+                                        <li>Networked System Security</li>
+                                        <li>Communication And Employability Skills For IT</li>
+                                        <li>Digital Graphics For Interactive Media</li>
+                                        <li>Computer Games Design</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="fst-italic">GCSE's</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2017</p>
+                                    <h6 class="mb-0 fst-italic">The Co-Operative Academy Of Stoke-On-Trent</h6>
+                                    <ul>
+                                        <li>English Literature Grade 6(six)</li>
+                                        <li>English Language Grade 5(five)</li>
+                                        <li>Spoken Language Merit</li>
+                                        <li>Mathematics Grade 6(six)</li>
+                                        <li>Information & Communication Technology Grade B(b)</li>
+                                        <li>D&T:Product Design Grade B(b)</li>
+                                        <li>Additional Science Grade B(b)</li>
+                                        <li>Polish Grade B(b)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="fst-italic">ECDL</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2017</p>
+                                    <h6 class="mb-0 fst-italic">The Co-Operative Academy Of Stoke-On-Trent</h6>
+                                    <ul>
+                                        <li>Improving Productivity Using IT</li>
+                                        <li>Presentation Software</li>
+                                        <li>Spreadsheet Software</li>
+                                        <li>Word Processing Software</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Atalian Servest Hospitality</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">January 2022-Present
+                                    </p>
+                                    <h6 class="mb-0">Room Attendant</h6>
+                                    <p>• Cleaning and maintenance including sanitization, preparing room equipment,
+                                        correct waste disposal.<br>
+                                        • Organization and stocking involving tidying rooms and storage areas alongside
+                                        ensuring good equipment stock levels and condition.<br>
+                                        • Specialized cleaning involves managing delicate furnishings and valuables as
+                                        well as performing deep cleaning tasks on a periodic basis.<br>
+                                        • Guest services such as assisting with guest arrivals and departures whilst
+                                        providing excellent customer service to guests.<br>
+                                        • Identifying and reporting safety hazards and ensuring overall safety through
+                                        following protocols and guidelines.<br>
+                                        • Prioritizing tasks and managing time efficiently to allow for suitable time
+                                        management.<br>
+                                        • Communication between the guests and supervisors to escalate issues.<br>
+                                        • Collaborating with fellow house keepers to support a well-functioning team.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5></h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">December 2021-January 2022</p>
+                                    <h6 class="mb-0">Sales Associate</h6>
+                                    <p>• Customer Assistance which involved assisting customers with queries, expertise
+                                        and guiding them towards resolutions by using product knowledge.<br>
+                                        • Sales involved upselling, promoting and cross selling relevant stock during
+                                        the assistance and transaction processes.<br>
+                                        • Adaptability between working on the store floor to assist customers, working
+                                        tills to check out customers and deal with paperwork or claims as well as
+                                        performing allocation duties to find user ordered stock in the storerooms.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Tim Hortons
+                                    </h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">August 2021-December 2021</p>
+                                    <h6 class="mb-0">Baker</h6>
+                                    <p>• Timely organizing and managing food cook times whilst following strict health
+                                        and safety protocols such as time keeping and labeling.
+                                        <br>• Being adaptable between other stations to help during difficult peak
+                                        hours.
+                                        <br>• Safely performing duties and keeping others safe in section space due to
+                                        the dangers involved with cooking such as burn dangers and hot top areas.
+                                        <br>• Effective communication between sections to allow for critical information
+                                        such as order and customer count to provide accurate cook times and product
+                                        availability.
+                                        • Cleaning and sanitization for cook areas to follow health protocols.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Euro Garages</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">February 2020-April 2021</p>
+                                    <h6 class="mb-0">Store Team Member</h6>
+                                    <p>Safety awareness due to working the night shifts alone in a remote location.<br>
+                                        • Cleaning and sanitization of food storage areas to abide with health
+                                        protocols.<br>
+                                        • Organization and restocking of goods to provide product availability.<br>
+                                        • Safely managing and securing large sums of currency collected from sales.<br>
+                                        • Handling handoffs and paperwork to effectively work with the day shift team
+                                        members.<br>
+                                        • Authorization of fuel pumps which involved vigilantly identifying hazards and
+                                        being ready to deal with safety issues such as smoking customers and dangers
+                                        such as fuel leaks.<br>
+                                        • Upselling, cross selling and promotion of goods to customers.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>NSCG Newcastle College</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">August 2018-June 2019</p>
+                                    <h6 class="mb-0">IT Technitian</h6>
+                                    <p>• Organizing and coordinating a team to deploy new equipment in multiple campuses
+                                        and campus locations with care and caution due to their expense.
+                                        <br>• Further, safely discarding and recycling old IT equipment following their
+                                        regulations.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Steelite International</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2017</p>
+                                    <h6 class="mb-0">IT Administrator work experience</h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+    <!-- Service Start -->
+    <!-- <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">What I can do</h1>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Creative Design</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code-branch fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Graphic Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">UI/UX Design</h4>
+                            <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                            <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Service End -->
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5 " id="project">
+        <div class="container pb100">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">UX/UI Design</li>
+                        <li class="mx-3" data-filter=".second">Web Development</li>
+                        <li class="mx-3" data-filter=".third">Courses</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-2 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100 " src="img/Projects/HomePageScreen.jpeg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://karchuti.github.io/Disertation-Website/index.html"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://github.com/karchuti/Disertation-Website"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Projects/Product Overlay.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://www.figma.com/file/ABL7CNY7CIrCUZXVBMWt7d/Prototype-of-app-of-phone?type=design&node-id=861%3A5009&mode=design&t=X5IYpAaePs7dc9Y3-1"><i
+                                    class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://miro.com/app/board/uXjVP-bSa9k=/"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Projects/Scan Screen - A.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://www.figma.com/file/ABL7CNY7CIrCUZXVBMWt7d/Prototype-of-app-of-phone?type=design&node-id=0%3A1&mode=design&t=X5IYpAaePs7dc9Y3-1"><i
+                                    class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Projects/Reg Pop up.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://www.figma.com/file/D9N59rZMGDfEvU08mVYhkH/Untitled?type=design&node-id=0%3A1&mode=design&t=2DpaMuOkGXp83Bcx-1"><i
+                                    class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://www.figma.com/file/gTpymKQOZPmexcenhxRyPV/Jet2Breakdown?type=whiteboard&node-id=0-1&t=z0htDDXDwB4367d6-0"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Education/UX-UI.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://learning.atheros.ai"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Education/graph.jpg" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://learning.atheros.ai"><i
+                                    class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+    <!--Hobbies-->
+    <div class="container-xxl py-6 pt-5" id="hobbies">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Hobbies</h1>
+                </div>
+            </div>
+            <div class="row g-2 portfolio2-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/skydive.jpg" alt="">
+      
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/caving.jpg" alt="">
+   
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/climbing.jpg" alt="">
+      
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/biking.jpg" alt="">
+   
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/zipline.jpg" alt="">
+  
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/quary karts.jpg" alt="">
 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/go-carting.jpg" alt="">
+     
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/paintablling.jpeg" alt="">
+        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio2-item ">
+                    <div class="portfolio2-img rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/Hobbies/airsoft.jpg" alt="">
+     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Team Members</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/team-1.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Full Name</h5>
+                                <span>Designer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/team-2.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Full Name</h5>
+                                <span>Designer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Full Name</h5>
+                                <span>Designer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">You can find me in:</p>
+                    <h3 class="fw-bold">Chester, Chesire</h3>
+                    <hr class="w-100">
+                    <hr class="w-100">
+                    <p class="mb-2">Or Mail me:</p>
+                    <h3 class="fw-bold">karchuti@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me on:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="www.linkedin.com/in/karchuti"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="container-xxl  px-0 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="container-xxl  px-0">
+                            <div class="bg-dark">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45487.396219044094!2d-2.9064527325067453!3d53.18849525152549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ac1d9629cf569%3A0x49626cb38dd8f89f!2sChester!5e0!3m2!1sen!2suk!4v1697463119266!5m2!1sen!2suk"
+                                    frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    <!-- Map Start -->
+    <!-- <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45487.396219044094!2d-2.9064527325067453!3d53.18849525152549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ac1d9629cf569%3A0x49626cb38dd8f89f!2sChester!5e0!3m2!1sen!2suk!4v1697463119266!5m2!1sen!2suk"
+                    frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div> -->
+    <!-- Map End -->
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom text-secondary" href="#">Igor's Portfolio</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+                    <br>Distributed By: <a class="border-bottom" href="https://themewagon.com"
+                        target="_blank">ThemeWagon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Copyright End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
