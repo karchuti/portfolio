@@ -1,4 +1,20 @@
 /********** Template CSS **********/
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    margin-right: 10px; /* Adjust spacing between items */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+    padding: 6px 12px;
+    background-color: var(--primary); /* Blue background color */
+    border-radius: 5px; /* Rounded corners */
+    color: white;
+}
+
 :root {
     --primary: #4169e1;
     --secondary: #E1B941;
