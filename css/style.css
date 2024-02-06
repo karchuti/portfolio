@@ -252,8 +252,6 @@
 .pb100{
     padding-bottom: 100px;
 }
-.dropshadow{
-    box-shadow: rgba(65, 105, 225, 0.4) 5px 5px, rgba(65, 105, 225, 0.3) 10px 10px, rgba(65, 105, 225, 0.2) 15px 15px, rgba(65, 105, 225, 0.1) 20px 20px, rgba(65, 105, 225, 0.05) 25px 25px;}
 .portfolio-btn {
     position: absolute;
     width: 100%;
