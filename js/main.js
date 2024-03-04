@@ -1,4 +1,5 @@
 (function ($) {
+
     "use strict";
     // Spinner
     var spinner = function () {
@@ -76,3 +77,13 @@
         loop: true,
     });
 })(jQuery);
+
+const str = "Download CV"
+const text = document.getElementById("text")
+window.onload = () => {
+    for (let i = 0; i < str.length; i++){
+        let span = document.createElement("span");
+        span.innerHTML = str[i];
+text.appendChild(span);
+span.style.transform = `rotate${11*i}deg`;
+    }};
