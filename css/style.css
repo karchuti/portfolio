@@ -1,3 +1,12 @@
+body{
+    color: #000000;
+}
+.prof{
+    background: url(../img/Banners/t5-removebg-preview.png)  no-repeat; 
+}
+.skills-container{
+    justify-content: center;
+}
 /********** Template CSS **********/
 .skills-list {
     list-style: none;
@@ -105,7 +114,6 @@
 /*** Header ***/
 #home {
     margin-bottom: 6rem;
-    background: url(../img/Banners/t5.png) left no-repeat;
 }
 .typed-cursor {
     font-size: 30px;
@@ -224,6 +232,34 @@
 }
 #skill .tab-content hr {
     width: 30px;
+}
+.portfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-content {
+    flex: 1 1 50%; /* This will make the content take up 50% of the container */
+}
+
+.portfolio-description {
+    flex: 1 1 50%; /* This will make the description take up 50% of the container */
+    padding: 20px;
+}
+
+.portfolio-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-description p {
+    margin-bottom: 20px;
+}
+
+.portfolio-img {
+    width: 100%; /* Make the image fill the entire width of its container */
+    text-align: center;
+    
 }
 /*** Service ***/
 .service-item .bg-icon {
