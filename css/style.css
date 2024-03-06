@@ -238,6 +238,11 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+.skill-item{
+    flex-wrap: wrap;
+    
+}
+
 
 .portfolio-content {
     flex: 1 1 50%; /* This will make the content take up 50% of the container */
@@ -313,6 +318,66 @@ body{
     padding-bottom: 30px !important;
 }
 /*** fix ***/
+
+#skill .progress {
+    height: 5px;
+    border-radius: 5px;
+}
+#skill .progress .progress-bar {
+    width: 0px;
+    border-radius: 5px;
+    transition: 3s;
+}
+#skill .nav-pills .nav-link {
+    color: var(--dark);
+}
+#skill .nav-pills .nav-link.active {
+    color: #FFFFFF;
+}
+#skill .tab-content hr {
+    width: 30px;
+}
+.portfolio2-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio2-content {
+    flex: 1 1 50%; /* This will make the content take up 50% of the container */
+}
+
+.portfolio2-description {
+    flex: 1 1 50%; /* This will make the description take up 50% of the container */
+    padding: 20px;
+}
+
+.portfolio2-description h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio2-description p {
+    margin-bottom: 20px;
+}
+
+.portfolio2-img {
+    width: 50%; /* Make the image fill the entire width of its container */
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    
+}
+/*** Service ***/
+.service-item .bg-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bg-icon.png) center center no-repeat;
+    background-size: cover;
+}
+/*** Project portfolio2 ***/
 #portfolio2-flters li {
     display: inline-block;
     font-weight: 500;
@@ -326,8 +391,8 @@ body{
     color: var(--primary);
     border-color: var(--primary);
 }
-.portfolio2-img {
-    position: relative;
+.pb100{
+    padding-bottom: 100px;
 }
 .portfolio2-btn {
     position: absolute;
@@ -335,7 +400,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(65, 105, 225, .2);
+    background: rgba(65, 105, 225, .4);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -352,6 +417,9 @@ body{
     opacity: 1;
     padding-bottom: 30px !important;
 }
+
+
+
 /*** Team ***/
 .team-item img {
     transition: .5s;

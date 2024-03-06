@@ -35,29 +35,7 @@
             loop: true
         });
     }
-    // Modal Video
-    var $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
-    });
-    console.log($videoSrc);
-    $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
-    $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
-    // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, { offset: '80%' });
+
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -68,22 +46,7 @@
         $(this).addClass('active');
         portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        items: 1,
-        dots: true,
-        loop: true,
-    });
-})(jQuery);
 
-const str = "Download CV"
-const text = document.getElementById("text")
-window.onload = () => {
-    for (let i = 0; i < str.length; i++){
-        let span = document.createElement("span");
-        span.innerHTML = str[i];
-text.appendChild(span);
-span.style.transform = `rotate${11*i}deg`;
-    }};
+    
+
+})(jQuery);
