@@ -113,9 +113,7 @@ body{
     border-style: solid;
 }
 /*** Header ***/
-#home {
-    margin-bottom: 6rem;
-}
+
 .typed-cursor {
     font-size: 30px;
     color: var(--dark);
@@ -337,30 +335,30 @@ body{
 #skill .tab-content hr {
     width: 30px;
 }
-.portfolio2-item {
+.hobbies-item {
     display: flex;
     flex-wrap: wrap;
 }
 
-.portfolio2-content {
+.hobbies-content {
     flex: 1 1 50%; /* This will make the content take up 50% of the container */
 }
 
-.portfolio2-description {
+.hobbies-description {
     flex: 1 1 50%; /* This will make the description take up 50% of the container */
     padding: 20px;
 }
 
-.portfolio2-description h3 {
+.hobbies-description h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.portfolio2-description p {
+.hobbies-description p {
     margin-bottom: 20px;
 }
 
-.portfolio2-img {
+.hobbies-img {
     width: 50%; /* Make the image fill the entire width of its container */
     text-align: center;
     display: block;
@@ -377,8 +375,8 @@ body{
     background: url(../img/bg-icon.png) center center no-repeat;
     background-size: cover;
 }
-/*** Project portfolio2 ***/
-#portfolio2-flters li {
+/*** Project hobbies ***/
+#hobbies-flters li {
     display: inline-block;
     font-weight: 500;
     color: var(--dark);
@@ -386,15 +384,15 @@ body{
     transition: .5s;
     border-bottom: 2px solid transparent;
 }
-#portfolio2-flters li:hover,
-#portfolio2-flters li.active {
+#hobbies-flters li:hover,
+#hobbies-flters li.active {
     color: var(--primary);
     border-color: var(--primary);
 }
 .pb100{
     padding-bottom: 100px;
 }
-.portfolio2-btn {
+.hobbies-btn {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -409,16 +407,14 @@ body{
     opacity: 0;
     transition: .5s;
 }
-.portfolio2-item:hover .portfolio2-btn {
+.hobbies-item:hover .hobbies-btn {
     opacity: 1;
     padding-bottom: 30px !important;
 }
-.portfolio2-item2:hover .portfolio2-btn {
+.hobbies-item2:hover .hobbies-btn {
     opacity: 1;
     padding-bottom: 30px !important;
 }
-
-
 
 /*** Team ***/
 .team-item img {
@@ -533,3 +529,26 @@ body{
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
 }
+
+/** ********************************************************* **/
+.gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
