@@ -1,4 +1,22 @@
+.back-button {
+    position: fixed;
+    /* No changes needed for other styles */
+}
 
+/* Additional CSS for button styling */
+.back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E47C2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #1E47C2;
+}
 body{
     color: #000000;
 }
@@ -24,8 +42,8 @@ body{
     color: white;
 }
 :root {
-    --primary: #4169e1;
-    --secondary: #E1B941;
+    --primary: #1E47C2;
+    --secondary: #E6C560;
     --light: #FAFAFB;
     --dark: #12141D;
 }
