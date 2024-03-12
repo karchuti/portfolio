@@ -7,7 +7,7 @@
 .back-button a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1E47C2;
+    background-color: #193A9F;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -15,7 +15,7 @@
 }
 
 .back-button a:hover {
-    background-color: #1E47C2;
+    background-color: #193A9F;
 }
 body{
     color: #000000;
@@ -42,7 +42,7 @@ body{
     color: white;
 }
 :root {
-    --primary: #1E47C2;
+    --primary: #193A9F;
     --secondary: #E6C560;
     --light: #FAFAFB;
     --dark: #12141D;
