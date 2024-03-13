@@ -7,7 +7,7 @@
 .back-button a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3756f9;
+    background-color: #204ACB;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -15,7 +15,7 @@
 }
 
 .back-button a:hover {
-    background-color: #3756f9;
+    background-color: #204ACB;
 }
 body{
     color: #000000;
@@ -42,8 +42,8 @@ body{
     color: white;
 }
 :root {
-    --primary: #3756f9;
-    --secondary: #FEEA8F;
+    --primary: #204ACB;
+    --secondary: ##E9CE7C;
     --light: #FAFAFB;
     --dark: #12141D;
 }
@@ -126,7 +126,7 @@ body{
     }
 }
 .myBorder{
-    border: #3756f9;
+    border: #204ACB;
     border-radius: 10px;
     border-style: solid;
 }
@@ -316,7 +316,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background:#3756f9;
+    background:#204ACB;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -416,7 +416,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background:#3756f9;
+    background:#204ACB;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
