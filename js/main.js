@@ -12,18 +12,26 @@
     spinner();
     // Initiate the wowjs
     new WOW().init();
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+            $('.back-to-top').fadeIn('slow'); // Fade in the button when scrolled down
         } else {
-            $('.back-to-top').fadeOut('slow');
+            $('.back-to-top').fadeOut('slow'); // Fade out the button when scrolled back to top
         }
     });
     $('.back-to-top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
+
+
+
+
+
+
+
     // Typed Initiate
     if ($('.typed-text-output').length == 1) {
         var typed_strings = $('.typed-text').text();
