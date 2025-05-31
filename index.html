@@ -9,7 +9,8 @@
     <meta content="" name="description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -18,10 +19,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80" class="position-relative">
+    <!-- Pulsing arrow and text will be injected by JS, do not add static markup here -->
     <!-- <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -29,10 +30,13 @@
         </div>
     </div> -->
 
+    <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">Igor Karchut</h1>
+            <h1 class="text-primary fw-bold m-0">Igor Karchu
+
+            </h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -57,85 +61,104 @@
     </nav>
     <!-- Navbar End -->
     <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 " id="About">
+    <div id="About" class="container-fluid bg-light my-6" tabindex="0" role="main">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Igor Karchut</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
+                    <h3 class="text-primary mb-3">I am</h3>
+                    <h1 class="display-3 mb-3 text-blue">Igor Karchut</h1>
+                    <h2 class="typed-text-output d-inline text-blue"></h2>
                     <br>
-                    <div class="typed-text d-none">IT Technitian, Web Designer, Programmer, UX/UI Designer, PC Builder
+                    <div class="typed-text d-none">Developer, Designer, Programmer, Problem Solver, Team player
                     </div>
                     <br>
-                    <p>Adaptable, curious problem-solver with tech expertise. Experienced in
-                        diverse industries with enhanced skills in communication, adaptability, and time management.
-                        Holds a bachelor's in computer science from The University of Chester. Active in sports with a
-                        history of volunteering resulting in leadership qualifications. Thrives on adventure and
-                        challenges. Eager to apply diverse skills and enthusiastic approach to team success in a dynamic
-                        work setting</p>
-
-                    <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">07518502040</h3>
+                    <p class="about-text-bg text-blue">
+                        I am a tech-savvy people person with a diverse range of IT and interpersonal skills, developed
+                        through years of study, customer-facing roles, and administrative experience.
+                        <br><br>With a Bachelor's degree in Computer Science, I specialise in delivering streamlined
+                        solutions for Excel and administrative tasks, optimising workflows to save time and resources
+                        previously spent on tedious activities.
+                        <br><br>Having spent a decade in customer-facing positions, I have gained the confidence to
+                        communicate clearly and effectively, whether working within a team or engaging with clients. My
+                        experience enables me to remain calm under pressure and provides a strong foundation for
+                        effective problem-solving.
+                    </p>
+                    <H2 class="mb-4 text-blue">Contact Me:</H2>
+                    <div class="d-flex align-items-center mb-2 justify-content-between">
+                        <h3 class="fw-bold text-blue mb-0" style="font-size: 1.75rem; line-height: 1;">07518502040</h3>
+                        <div class="d-flex align-items-center" style="gap: 12px;">
+                            <span class="fw-bold text-blue mb-0" style="font-size: 1.75rem; line-height: 1;">View me on:</span>
+                            <a href="https://www.linkedin.com/in/karchuti" aria-label="LinkedIn Profile" class="ms-3"
+                                style="margin-left:0;">
+                                <img src="img/Icons/liknedIn-removebg-preview.png" alt="LinkedIn Profile"
+                                    style="height:40px;width:auto;">
+                            </a>
+                        </div>
+                    </div>
                     <hr class="w-100">
-                    <p class="mb-2">Or Mail me:</p>
-                    <h3 class="fw-bold">karchuti@gmail.com</h3>
+                    <div class="d-flex align-items-center mb-2 justify-content-between">
+                        <h3 class="fw-bold text-blue mb-0" style="font-size: 1.75rem; line-height: 1;">karchuti@gmail.com</h3>
+                        <div class="d-flex align-items-center" style="gap: 12px;">
+                            <a href="IgorKarchutCV.pdf" aria-label="Download CV" class="fw-bold text-blue mb-0" style="font-size: 1.75rem; line-height: 1; text-decoration: none;" download>
+                                Download:
+                            </a>
+                            <a href="IgorKarchutCV.pdf" aria-label="Download CV" class="ms-3" style="margin-left:0;" download>
+                                <img src="img/Icons/CVIcon-removebg-preview.png" alt="CV Icon"
+                                    style="height:40px;width:40px;">
+                            </a>
+                        </div>
+                    </div>
                     <hr class="w-100">
-                    <p class="mb-2">Check me out on:</p>
-                    <a href="https://www.linkedin.com/in/karchuti"> <img src="img/Icons/liknedIn-removebg-preview.png"alt=""></a>
-
-                    <p class="mb-2">Download CV::</p>
-                    <a href="IgorKarchutCV.pdf"> <img src="img/Icons/CVIcon-removebg-preview.png" alt=""></a>
-
                 </div>
-                <div class="prof col-lg-6">
-                    <img class="img-fluid padTop" src="img/About/profile-removebg-preview.png" alt="">
+                <div class="prof col-lg-6 position-relative">
+                    <img class="img-fluid rounded" src="img/About/Profile_Igor.png" alt="Profile Image">
+                    <!-- Removed: profile-icons-overlay -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-xxl py-6" id="Skills">
 
+    <div id="Skills" class="container-xxl py-6" tabindex="0">
         <div class="wow fadeInUp text-center" data-wow-delay="0.1s">
-            <h3 class="mb-4">Skill</h3>
+            <h1 class="mb-4">Skill</h1>
             <div class="row align-items-center justify-content-center">
                 <div class="container-fluid align-items-center">
 
                     <div class="row g-2 skills-container wow fadeInUp" data-wow-delay="0.1s">
                         <div class="col-lg-2 col-md-6 skill-item  ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/Swift.png" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/Swift.png" alt="Swift Logo">
                             </div>
                             <P>Swift</P>
                         </div>
                         <div class="col-lg-2 col-md-6 skill-item ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/Java.png" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/Java.png" alt="Java Logo">
                             </div>
                             <p>Java</p>
                         </div>
                         <div class="col-lg-2 col-md-6 skill-item ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/Kotlin.png" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/Kotlin.png" alt="Kotlin Logo">
                             </div>
                             <p>Kotlin</p>
                         </div>
                         <div class="col-lg-2 col-md-6 skill-item ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/UI-UX.png" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/UI-UX.png" alt="UI/UX Icon">
                             </div>
                             <p>UI/UX</p>
                         </div>
                         <div class="col-lg-2 col-md-6 skill-item ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/Web Design.png" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/Web Design.png" alt="Web Design Icon">
                             </div>
                             <p>Web Design</p>
                         </div>
 
                         <div class="col-lg-2 col-md-6 skill-item ">
                             <div class="portfolio-img rounded overflow-hidden">
-                                <img class="img-fluid w-50" src="img/Icons/Support.jpg" alt="">
+                                <img class="img-fluid w-50" src="img/Icons/Support.jpg" alt="Support Icon">
                             </div>
                             <p>Support</p>
                         </div>
@@ -249,378 +272,550 @@
             </div>
         </div>
     </div>
-    </div>
 
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     <!-- About End -->
     <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="Experience">
+    <div id="Experience" class="container-xxl py-6 pb-5" tabindex="0">
         <div class="container">
-            <div class="row g-5">
-                <h1 class="display-5 mb-5">Education & Experience</h1>
-                <div class="container-fluid wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
-                                href="#tab-1">Education</button>
-                        </li>
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
-                                href="#tab-2">Experience</button>
-                        </li>
-                        <!-- <li class="nav-item w-33">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
-                                href="#tab-2">Other Experience</button>
-                        </li> -->
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5 class="fst-italic">Undergraduate Bachelors 2:2</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2023</p>
-                                    <h6 class="mb-0 fst-italic">University of Chester</h6>
-                                    <ul>
-                                        <li>Mathematics for Computing</li>
-                                        <li>Experiential Learning(Computing)</li>
-                                        <li>Computer Systems and Networks</li>
-                                        <li>Data Structures and Algorithms</li>
-                                        <li>Databases II</li>
-                                        <li>Programming II</li>
-                                        <li>Web Application Development</li>
-                                        <li>Innovation Project</li>
-                                        <li>System Analysis</li>
-                                        <li>Network Protocols and Methods</li>
-                                        <li>Design Thinking for Innovation</li>
-                                        <li>Programming III</li>
-                                    </ul>
+            <h1 class="display-5 mb-5">Education & Experience</h1>
+            <ul class="nav nav-pills rounded border border-2 border-primary mb-5 justify-content-center"
+                style="display: flex;">
+                <li class="nav-item flex-fill text-center order-2">
+                    <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
+                        data-bs-target="#timeline-all">All</button>
+                </li>
+                <li class="nav-item flex-fill text-center order-1">
+                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
+                        data-bs-target="#timeline-education">Education</button>
+                </li>
+                <li class="nav-item flex-fill text-center order-3">
+                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
+                        data-bs-target="#timeline-experience">Experience</button>
+                </li>
+            </ul>
+            <div class="tab-content timeline-tab-content">
+                <!-- All Timeline (default) -->
+                <div class="tab-pane fade show active" id="timeline-all">
+                    <div class="timeline">
+                        <!-- Sorted by date, newest to oldest -->
+                        <!-- Experience -->
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jan 2025 - Present</span>
+                                <div class="timeline-title">Contract Support</div>
+                                <div class="timeline-subtitle">CBRE · Full-time · Broughton, Chester CH4 0DR · Hybrid
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 class="fst-italic">Level 3 Extended Diploma D*D*D*</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2019</p>
-                                    <h6 class="mb-0 fst-italic">Newcastle and Stafford Collages Grouo</h6>
-                                    <ul>
-                                        <li>Computer Systems</li>
-                                        <li>Information Systems</li>
-                                        <li>Computer Networks</li>
-                                        <li>Event Driven Programming</li>
-                                        <li>Procedural Programming</li>
-                                        <li>Human Computer Interaction</li>
-                                        <li>Website Production</li>
-                                        <li>Spreadsheet Modelling</li>
-                                        <li>Software Design and Development</li>
-                                        <li>E-Commerce</li>
-                                        <li>System Analysis and Design</li>
-                                        <li>Database Design</li>
-                                        <li>Data Analysis and Design</li>
-                                        <li>Developing Computer Games</li>
-                                        <li>Networked System Security</li>
-                                        <li>Communication And Employability Skills For IT</li>
-                                        <li>Digital Graphics for Interactive Media</li>
-                                        <li>Computer Games Design</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5 class="fst-italic">GCSE's</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2017</p>
-                                    <h6 class="mb-0 fst-italic">The Co-Operative Academy Of Stoke-On-Trent</h6>
-                                    <ul>
-                                        <li>English Literature Grade 6(six)</li>
-                                        <li>English Language Grade 5(five)</li>
-                                        <li>Spoken Language Merit</li>
-                                        <li>Mathematics Grade 6(six)</li>
-                                        <li>Information & Communication Technology Grade B(b)</li>
-                                        <li>D&T:Product Design Grade B(b)</li>
-                                        <li>Additional Science Grade B(b)</li>
-                                        <li>Polish Grade B(b)</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5 class="fst-italic">ECDL</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2017</p>
-                                    <h6 class="mb-0 fst-italic">The Co-Operative Academy Of Stoke-On-Trent</h6>
-                                    <ul>
-                                        <li>Improving Productivity Using IT</li>
-                                        <li>Presentation Software</li>
-                                        <li>Spreadsheet Software</li>
-                                        <li>Word Processing Software</li>
-                                    </ul>
+                                <div class="timeline-description">
+                                    Provide comprehensive administrative and financial support for facilities management
+                                    operations. Utilise CAFM systems, Microsoft Excel, and the full Microsoft Suite to
+                                    manage daily office tasks. Responsible for the creation, management, and invoicing
+                                    of Purchase Orders, Work Orders, Web Quotes, and Invoices. Prepare detailed weekly
+                                    and monthly financial and administrative reports, ensuring data accuracy and
+                                    compliance. Act as the primary point of contact for queries, delivering prompt and
+                                    professional assistance to both internal teams and external clients. Maintain
+                                    meticulous records and support audit processes with a focus on accuracy and
+                                    attention to detail.<br>
+                                    <strong>Skills:</strong> Microsoft Excel, Accounting, Attention to Detail, Office
+                                    Administration, Communication
                                 </div>
                             </div>
                         </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>Curry's</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">December 2021-January 2022</p>
-                                    <h6 class="mb-0">Sales Associate</h6>
-                                    <p> ● Customer Assistance which involved assisting customers with queries, expertise
-                                        and guiding them towards resolutions by using product knowledge. <br>
-                                        ● Sales involved upselling, promoting and cross selling relevant stock during
-                                        the
-                                        assistance and transaction processes. <br>
-                                        ● Adaptability between working on the store floor to assist customers, working
-                                        tills to check out customers and deal with paperwork or claims as well as
-                                        performing allocation duties to find user ordered stock in the storerooms. </p>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Apr 2024 - Jan 2025</span>
+                                <div class="timeline-title">Help Desk Operator</div>
+                                <div class="timeline-subtitle">CBRE Global Workplace Solutions (GWS) · Contract · Airbus
+                                    UK · On-site</div>
+                                <div class="timeline-description">
+                                    Managed the CAFM system to ensure accurate tracking of Planned Preventative
+                                    Maintenance (PPM) records and reactive tasks. Responded promptly and courteously to
+                                    calls and emails, capturing all incident details with precision. Assigned reactive
+                                    requests to the appropriate engineers, prioritising tasks to ensure timely
+                                    resolution. Maintained clear and consistent communication between the Facilities
+                                    Team and end users, providing regular updates and minimising disruption.
+                                    Collaborated closely with the Lead Engineer and Operations Manager to uphold service
+                                    quality standards. Monitored subcontractor performance and facilitated feedback and
+                                    reviews, supporting continuous improvement.<br>
+                                    <strong>Skills:</strong> Customer Service, Microsoft Excel, Communication, Office
+                                    Administration
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>NSCG Newcastle College</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">August 2018-June 2019</p>
-                                    <h6 class="mb-0">IT Technitian</h6>
-                                    <p>● Organizing and coordinating a team to deploy new equipment in multiple
-                                        campuses and campus locations with care and caution due to their expense. <br>
-                                        ● Further, safely discarding and recycling old IT equipment following their
-                                        regulations.
-                                    </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017 - 2024</span>
+                                <div class="timeline-title">Customer Service Roles</div>
+                                <div class="timeline-subtitle">Various Sectors</div>
+                                <div class="timeline-description">
+                                    Developed a broad set of transferable skills through extensive experience in customer-facing environments across retail, hospitality, and food service sectors. Demonstrated strong communication and interpersonal abilities by engaging with diverse customers and resolving queries efficiently. Managed sales transactions, maintained high standards of presentation, and ensured timely delivery of products and services. Supported team training, upheld strict hygiene and quality standards, and responded promptly to customer requests. Proven adaptability, attention to detail, and a commitment to delivering positive experiences in fast-paced, team-oriented settings.
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Steelite International</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2017</p>
-                                    <h6 class="mb-0">IT Administrator work experience</h6>
-                                    <p>● Troubleshooted software & hardware <br>
-                                        ● Manager hardware replacement & Storage <br>
-                                        ● Performed backups physical & virtually daily / weakly. <br>
-                                        ● Fault flagging & monitoring for the backup software <br>
-                                        ● Issue ticketing. <br>
-                                        ● Problem Escalation </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Aug 2018 - Jun 2019</span>
+                                <div class="timeline-title">IT Technician</div>
+                                <div class="timeline-subtitle">NSCG Newcastle College</div>
+                                <div class="timeline-description">
+                                    Coordinated a team to deploy new IT equipment across multiple campuses, ensuring
+                                    careful handling and installation. Managed the safe disposal and recycling of
+                                    outdated equipment in compliance with organisational policies. Supported the IT
+                                    department in maintaining operational efficiency and minimising downtime.
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Tim Hortons
-                                    </h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">August 2021-December 2021</p>
-                                    <h6 class="mb-0">Baker</h6>
-
-                                    <p>● Coordinated with front-of-house staff to ensure timely delivery of baked goods.
-                                        <br>
-                                        ● Maintained a high-level of sanitation and hygiene standards as per health
-                                        regulations. <br>
-                                        ● Managed and trained a baker, ensuring adherence to recipes and standards.
-                                    </p>
+                            </div>
+                        </div>
+                        <!-- Education -->
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023</span>
+                                <div class="timeline-title">BSc (Hons) Computer Science, 2:2</div>
+                                <div class="timeline-subtitle">University of Chester</div>
+                                <div class="timeline-description">
+                                    Developed a strong foundation in computer science, covering advanced topics such as
+                                    Data Structures and Algorithms, Computer Systems and Networks, and Web Application
+                                    Development. Completed an Innovation Project and Programming III, demonstrating
+                                    proficiency in software design, system analysis, and modern development
+                                    methodologies. Gained practical experience through Experiential Learning and applied
+                                    design thinking to real-world problems. Graduated with a comprehensive understanding
+                                    of both theoretical and applied computing.
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Euro Garages</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">February 2020-April 2021</p>
-                                    <h6 class="mb-0">Store Team Member</h6>
-                                    <p>● Collaborated with team members to achieve store goals. <br>
-                                        ● Followed cash handling procedures to ensure accuracy and reduce losses. <br>
-                                        ● Demonstrated excellent communication skills when dealing with customers and
-                                        staff. <br>
-                                        ● Maintained a clean and organized work area to ensure a safe and pleasant
-                                        environment for customers and staff </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019</span>
+                                <div class="timeline-title">Level 3 Extended Diploma in IT, D*D*D*</div>
+                                <div class="timeline-subtitle">Newcastle and Stafford Colleges Group</div>
+                                <div class="timeline-description">
+                                    Achieved the highest grade in a rigorous program focused on Computer Systems,
+                                    Networking, Programming (Procedural and Event Driven), Human Computer Interaction,
+                                    and E-Commerce. Developed skills in software design, database management, and
+                                    digital graphics. Demonstrated strong analytical and problem-solving abilities
+                                    through coursework in System Analysis and Design, Data Analysis, and Game
+                                    Development.
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5>Atalian Servest Hospitality</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">January 2022-Present
-                                    </p>
-                                    <h6 class="mb-0">Room Attendant</h6>
-                                    <p>● Responded to guest inquiries and requests in a timely and courteous manner.
-                                        <br>
-                                        ● Replenished amenities, linens and supplies in guest rooms, ensuring
-                                        availability
-                                        of all items. <br>
-                                        ● Reported any damages, hazards, or safety concerns to the supervisor for prompt
-                                        resolution. <br>
-                                        ● Collaborated with team members to ensure all tasks are completed quickly and
-                                        efficiently
-                                    </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">GCSEs</div>
+                                <div class="timeline-subtitle">The Co-Operative Academy Of Stoke-On-Trent</div>
+                                <div class="timeline-description">
+                                    Successfully completed GCSEs with strong results in English Literature (Grade 6),
+                                    Mathematics (Grade 6), ICT (Grade B), and Product Design (Grade B). Demonstrated
+                                    effective communication skills and a solid grounding in STEM subjects, providing a
+                                    strong academic base for further studies in computing and technology.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">European Computer Driving Licence (ECDL)</div>
+                                <div class="timeline-subtitle">The Co-Operative Academy Of Stoke-On-Trent</div>
+                                <div class="timeline-description">
+                                    Gained practical proficiency in core office software, including Word Processing,
+                                    Spreadsheets, and Presentation Software. Demonstrated the ability to improve
+                                    productivity using IT tools, supporting future academic and professional work with
+                                    strong digital literacy.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">IT Administrator (Work Experience)</div>
+                                <div class="timeline-subtitle">Steelite International</div>
+                                <div class="timeline-description">
+                                    Provided technical support for software and hardware issues, managed daily and
+                                    weekly backups, and monitored backup software for faults. Handled issue ticketing
+                                    and problem escalation, contributing to the reliability and security of IT systems.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-xxl py-6 pt-5 " id="Projects">
-        <div class="container pb100">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Showcase</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All </li>
-                        <li class="mx-3" data-filter=".first">UX/UI Design</li>
-                        <li class="mx-3" data-filter=".second">Web Development</li>
-                        <li class="mx-3" data-filter=".third">Kotlin</li>
-                        <li class="mx-3" data-filter=".fourth">Swift</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-5 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="portfolio-item second">
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Projects/2.PNG" alt="">
+                <!-- Education Timeline -->
+                <div class="tab-pane fade" id="timeline-education">
+                    <div class="timeline">
+                        <!-- Sorted by date, newest to oldest -->
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023</span>
+                                <div class="timeline-title">BSc (Hons) Computer Science, 2:2</div>
+                                <div class="timeline-subtitle">University of Chester</div>
+                                <div class="timeline-description">
+                                    Developed a strong foundation in computer science, covering advanced topics such as
+                                    Data Structures and Algorithms, Computer Systems and Networks, and Web Application
+                                    Development. Completed an Innovation Project and Programming III, demonstrating
+                                    proficiency in software design, system analysis, and modern development
+                                    methodologies. Gained practical experience through Experiential Learning and applied
+                                    design thinking to real-world problems. Graduated with a comprehensive understanding
+                                    of both theoretical and applied computing.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-description">
-                        <h3>Website coded from scratch</h3>
-                        <p>Dissertation Project</p>
-
-                        <p>For my dissertation project, I meticulously developed a website from the ground up, focusing
-                            on accessibility, usability, and informativeness.</p>
-
-                        <p>Adhering closely to the WCAG guidelines and employing best coding practices, the website
-                            boasts exceptional accessibility. It incorporates essential features such as descriptive alt
-                            text for images, a meticulously structured hierarchy facilitating keyboard navigation, and
-                            carefully chosen color contrasts to accommodate individuals with varying visual abilities.
-                        </p>
-
-                        <p>Furthermore, I meticulously designed the layout, navigation, and interactive elements based
-                            on UX principles, ensuring a seamless and intuitive user experience.</p>
-
-                        <p>The inspiration behind the website's informative nature stems from the observation of the
-                            lack of clear documentation and abundant data on Datacenters. Hence, my aim was to bridge
-                            this knowledge gap in the most user-friendly manner possible.</p>
-                        <a href="websiteFromScratch.html" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-                <div class="portfolio-item first">
-                    <div class="portfolio-description">
-                        <h3>Jet2Careers Sign in/up redesign using UX/UI </h3>
-                        <p>Jet2Careers project</p>
-                        <p>While job seeking, I came across Jet2Careers job portal and having just completed my courses
-                            I wanted to apply my skills to their under developed site. </p>
-                        <p>Here I transformed the off-balance, lacking hierarchy and un-appealing sign in/up section on
-                            the page into a vibran, appealing, balanced sign in/up pop up that has proper structure and
-                            hierachy.</p>
-                        <a href="jet2CareersProject.html" class="btn btn-primary">Read More</a>
-
-                    </div>
-                    <div class="portfolio-content ">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded " src="img/Projects/Reg Comp.png" alt="">
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019</span>
+                                <div class="timeline-title">Level 3 Extended Diploma in IT, D*D*D*</div>
+                                <div class="timeline-subtitle">Newcastle and Stafford Colleges Group</div>
+                                <div class="timeline-description">
+                                    Achieved the highest grade in a rigorous program focused on Computer Systems,
+                                    Networking, Programming (Procedural and Event Driven), Human Computer Interaction,
+                                    and E-Commerce. Developed skills in software design, database management, and
+                                    digital graphics. Demonstrated strong analytical and problem-solving abilities
+                                    through coursework in System Analysis and Design, Data Analysis, and Game
+                                    Development.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="portfolio-item first">
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Education/UX-UI.jpg" alt="">
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">GCSEs</div>
+                                <div class="timeline-subtitle">The Co-Operative Academy Of Stoke-On-Trent</div>
+                                <div class="timeline-description">
+                                    Successfully completed GCSEs with strong results in English Literature (Grade 6),
+                                    Mathematics (Grade 6), ICT (Grade B), and Product Design (Grade B). Demonstrated
+                                    effective communication skills and a solid grounding in STEM subjects, providing a
+                                    strong academic base for further studies in computing and technology.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="portfolio-description">
-                        <h3>Completed a course in UX / UI </h3>
-                        <p>UX/UI Course</p>
-                        <p>The course provided me with various techniques and methodologies that I'll apply in future
-                            projects</p>
-                        <a href="courseInUX.html" class="btn btn-primary">Read More</a>
-
-                    </div>
-                </div>
-                <div class="portfolio-item first">
-                    <div class="portfolio-description">
-                        <h3>Completed a course in GraphQL</h3>
-                        <p>GraphQL</p>
-                        <p>Altough it wasn't in my feild, being availabnle I took the oppurtinity to complete the course
-                            in prepartion of ever using the language. </p>
-                        <a href="crouseGraphQL.html" class="btn btn-primary">Read More</a>
-
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Education/graph.jpg" alt="">
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">European Computer Driving Licence (ECDL)</div>
+                                <div class="timeline-subtitle">The Co-Operative Academy Of Stoke-On-Trent</div>
+                                <div class="timeline-description">
+                                    Gained practical proficiency in core office software, including Word Processing,
+                                    Spreadsheets, and Presentation Software. Demonstrated the ability to improve
+                                    productivity using IT tools, supporting future academic and professional work with
+                                    strong digital literacy.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item first">
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Projects/Product Overlay.jpg"
-                                alt="">
+                <!-- Experience Timeline -->
+                <div class="tab-pane fade" id="timeline-experience">
+                    <div class="timeline">
+                        <!-- Sorted by date, newest to oldest -->
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Jan 2025 - Present</span>
+                                <div class="timeline-title">Contract Support</div>
+                                <div class="timeline-subtitle">CBRE · Full-time · Broughton, Chester CH4 0DR · Hybrid
+                                </div>
+                                <div class="timeline-description">
+                                    Provide comprehensive administrative and financial support for facilities management
+                                    operations. Utilise CAFM systems, Microsoft Excel, and the full Microsoft Suite to
+                                    manage daily office tasks. Responsible for the creation, management, and invoicing
+                                    of Purchase Orders, Work Orders, Web Quotes, and Invoices. Prepare detailed weekly
+                                    and monthly financial and administrative reports, ensuring data accuracy and
+                                    compliance. Act as the primary point of contact for queries, delivering prompt and
+                                    professional assistance to both internal teams and external clients. Maintain
+                                    meticulous records and support audit processes with a focus on accuracy and
+                                    attention to detail.<br>
+                                    <strong>Skills:</strong> Microsoft Excel, Accounting, Attention to Detail, Office
+                                    Administration, Communication
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Apr 2024 - May 2025</span>
+                                <div class="timeline-title">Help Desk Operator</div>
+                                <div class="timeline-subtitle">CBRE Global Workplace Solutions (GWS) · Contract · Airbus
+                                    UK · On-site</div>
+                                <div class="timeline-description">
+                                    Managed the CAFM system to ensure accurate tracking of Planned Preventative
+                                    Maintenance (PPM) records and reactive tasks. Responded promptly and courteously to
+                                    calls and emails, capturing all incident details with precision. Assigned reactive
+                                    requests to the appropriate engineers, prioritising tasks to ensure timely
+                                    resolution. Maintained clear and consistent communication between the Facilities
+                                    Team and end users, providing regular updates and minimising disruption.
+                                    Collaborated closely with the Lead Engineer and Operations Manager to uphold service
+                                    quality standards. Monitored subcontractor performance and facilitated feedback and
+                                    reviews, supporting continuous improvement.<br>
+                                    <strong>Skills:</strong> Customer Service, Microsoft Excel, Communication, Office
+                                    Administration
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017 - 2024</span>
+                                <div class="timeline-title">Customer Service Roles</div>
+                                <div class="timeline-subtitle">Various Sectors</div>
+                                <div class="timeline-description">
+                                    Developed a broad set of transferable skills through extensive experience in customer-facing environments across retail, hospitality, and food service sectors. Demonstrated strong communication and interpersonal abilities by engaging with diverse customers and resolving queries efficiently. Managed sales transactions, maintained high standards of presentation, and ensured timely delivery of products and services. Supported team training, upheld strict hygiene and quality standards, and responded promptly to customer requests. Proven adaptability, attention to detail, and a commitment to delivering positive experiences in fast-paced, team-oriented settings.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Aug 2018 - Jun 2019</span>
+                                <div class="timeline-title">IT Technician</div>
+                                <div class="timeline-subtitle">NSCG Newcastle College</div>
+                                <div class="timeline-description">
+                                    Coordinated a team to deploy new IT equipment across multiple campuses, ensuring
+                                    careful handling and installation. Managed the safe disposal and recycling of
+                                    outdated equipment in compliance with organisational policies. Supported the IT
+                                    department in maintaining operational efficiency and minimising downtime.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2017</span>
+                                <div class="timeline-title">IT Administrator (Work Experience)</div>
+                                <div class="timeline-subtitle">Steelite International</div>
+                                <div class="timeline-description">
+                                    Provided technical support for software and hardware issues, managed daily and
+                                    weekly backups, and monitored backup software for faults. Handled issue ticketing
+                                    and problem escalation, contributing to the reliability and security of IT systems.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="portfolio-description">
-                        <h3>UX Module Project</h3>
-                        <p>V2 Impact Score App</p>
-                        <p>What I created was a website deisgned from the ground up using UX and UI principles to be
-                            easy to understand, follow and navigate coded using HTML, CSS and Javascript addiding
-                            various interactive elements while being informative.</p>
-                        <a href="UXModuleProjectV2.html" class="btn btn-primary">Read More</a>
-
-                    </div>
                 </div>
-                <div class="portfolio-item first">
-                    <div class="portfolio-description">
-                        <h3>UX Module Project</h3>
-                        <p>Impact Score App</p>
-                        <p>What I created was a website deisgned from the ground up using UX and UI principles to be
-                            easy to understand, follow and navigate coded using HTML, CSS and Javascript addiding
-                            various interactive elements while being informative.</p>
-                        <a href="UXModuleProjectV1.html" class="btn btn-primary">Read More</a>
+                <div id="Projects" class="container-xxl py-6 pt-5" tabindex="0">
+                    <div class="container pb100">
+                        <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="col-lg-6">
+                                <h1 class="display-5 mb-0">Showcase</h1>
+                            </div>
+                        </div>
+                        <!-- Move Showcase menu here, full width, matching Education & Experience -->
+                        <ul class="nav nav-pills rounded border border-2 border-primary mb-5 justify-content-center w-100"
+                            id="portfolio-flters" style="display: flex;">
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5 active" data-filter="*">All</button>
+                            </li>
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5" data-filter=".fifth">Excel VBA</button>
+                            </li>
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5" data-filter=".first">UX/UI Design</button>
+                            </li>
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5" data-filter=".second">Web Development</button>
+                            </li>
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5" data-filter=".third">Kotlin</button>
+                            </li>
+                            <li class="nav-item flex-fill text-center">
+                                <button class="nav-link w-100 py-3 fs-5" data-filter=".fourth">Swift</button>
+                            </li>
 
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Projects/Scan Screen - A.jpg"
-                                alt="">
+                        </ul>
+                        <div class="row g-5 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="portfolio-item second">
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded" src="img/Projects/2.PNG"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="portfolio-description">
+                                    <h3>Website coded from scratch</h3>
+                                    <p>Dissertation Project</p>
+
+                                    <p>For my dissertation project, I meticulously developed a website from the ground
+                                        up, focusing
+                                        on accessibility, usability, and informativeness.</p>
+
+                                    <p>Adhering closely to the WCAG guidelines and employing best coding practices, the
+                                        website
+                                        boasts exceptional accessibility. It incorporates essential features such as
+                                        descriptive alt
+                                        text for images, a meticulously structured hierarchy facilitating keyboard
+                                        navigation, and
+                                        carefully chosen color contrasts to accommodate individuals with varying visual
+                                        abilities.
+                                    </p>
+
+                                    <p>Furthermore, I meticulously designed the layout, navigation, and interactive
+                                        elements based
+                                        on UX principles, ensuring a seamless and intuitive user experience.</p>
+
+                                    <p>The inspiration behind the website's informative nature stems from the
+                                        observation of the
+                                        lack of clear documentation and abundant data on Datacenters. Hence, my aim was
+                                        to bridge
+                                        this knowledge gap in the most user-friendly manner possible.</p>
+                                    <a href="websiteFromScratch.html" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-item first">
+                                <div class="portfolio-description">
+                                    <h3>Jet2Careers Sign in/up redesign using UX/UI </h3>
+                                    <p>Jet2Careers project</p>
+                                    <p>While job seeking, I came across Jet2Careers job portal and having just completed
+                                        my courses
+                                        I wanted to apply my skills to their under developed site. </p>
+                                    <p>Here I transformed the off-balance, lacking hierarchy and un-appealing sign in/up
+                                        section on
+                                        the page into a vibran, appealing, balanced sign in/up pop up that has proper
+                                        structure and
+                                        hierachy.</p>
+                                    <a href="jet2CareersProject.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                                <div class="portfolio-content ">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded "
+                                            src="img/Projects/Reg Comp.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-item first">
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded" src="img/Education/UX-UI.jpg"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="portfolio-description">
+                                    <h3>Completed a course in UX / UI </h3>
+                                    <p>UX/UI Course</p>
+                                    <p>The course provided me with various techniques and methodologies that I'll apply
+                                        in future
+                                        projects</p>
+                                    <a href="courseInUX.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                            </div>
+                            <div class="portfolio-item first">
+                                <div class="portfolio-description">
+                                    <h3>Completed a course in GraphQL</h3>
+                                    <p>GraphQL</p>
+                                    <p>Altough it wasn't in my feild, being availabnle I took the oppurtinity to
+                                        complete the course
+                                        in prepartion of ever using the language. </p>
+                                    <a href="crouseGraphQL.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded" src="img/Education/graph.jpg"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-item first">
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded"
+                                            src="img/Projects/Product Overlay.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="portfolio-description">
+                                    <h3>UX Module Project</h3>
+                                    <p>V2 Impact Score App</p>
+                                    <p>What I created was a website deisgned from the ground up using UX and UI
+                                        principles to be
+                                        easy to understand, follow and navigate coded using HTML, CSS and Javascript
+                                        addiding
+                                        various interactive elements while being informative.</p>
+                                    <a href="UXModuleProjectV2.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                            </div>
+                            <div class="portfolio-item first">
+                                <div class="portfolio-description">
+                                    <h3>UX Module Project</h3>
+                                    <p>Impact Score App</p>
+                                    <p>What I created was a website deisgned from the ground up using UX and UI
+                                        principles to be
+                                        easy to understand, follow and navigate coded using HTML, CSS and Javascript
+                                        addiding
+                                        various interactive elements while being informative.</p>
+                                    <a href="UXModuleProjectV1.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded"
+                                            src="img/Projects/Scan Screen - A.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-item third">
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded"
+                                            src="img/Projects/futurama.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="portfolio-description">
+                                    <h3>Futurama Joke API Recycler</h3>
+                                    <p>API Recycler</p>
+                                    <p>This iteration of the program took makes a initial API request for the futurama
+                                        character
+                                        names, places them into a recycler view and allows the user to click through the
+                                        name taking
+                                        them to another screen with another recycler view that applys the name pressed
+                                        to a new API
+                                        request that gets the jokes from that character. </p>
+                                    <a href="futurama.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                            </div>
+                            <div class="portfolio-item third">
+                                <div class="portfolio-description">
+                                    <h3>Internation Space Station Co-Ordinates</h3>
+                                    <p>API Request</p>
+                                    <p>Here is a app coded in kotlin that makes an API call to the international space
+                                        station that
+                                        returns either the latitude, longitude or altitude of the station.</p>
+                                    <a href="spaceStation.html" class="btn btn-primary">Read More</a>
+
+                                </div>
+                                <div class="portfolio-content">
+                                    <div class="portfolio-img rounded overflow-hidden">
+                                        <img class="img-fluid align-items-center rounded" src="img/Projects/Space.png"
+                                            alt="">
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item third">
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Projects/futurama.png" alt="">
-                        </div>
-                    </div>
-                    <div class="portfolio-description">
-                        <h3>Futurama Joke API Recycler</h3>
-                        <p>API Recycler</p>
-                        <p>This iteration of the program took makes a initial API request for the futurama character
-                            names, places them into a recycler view and allows the user to click through the name taking
-                            them to another screen with another recycler view that applys the name pressed to a new API
-                            request that gets the jokes from that character. </p>
-                        <a href="futurama.html" class="btn btn-primary">Read More</a>
 
-                    </div>
-                </div>
-                <div class="portfolio-item third">
-                    <div class="portfolio-description">
-                        <h3>Internation Space Station Co-Ordinates</h3>
-                        <p>API Request</p>
-                        <p>Here is a app coded in kotlin that makes an API call to the international space station that
-                            returns either the latitude, longitude or altitude of the station.</p>
-                        <a href="spaceStation.html" class="btn btn-primary">Read More</a>
-
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid align-items-center rounded" src="img/Projects/Space.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Projects End -->
-    <!--Hobbies-->
+                <!-- Projects End -->
+                <!--Hobbies-->
 
 
-    <div class="container-xxl py-6 pt-5" id="Hobbies">
-        <div class="container pb100">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Hobbies & Experiences</h1>
-                </div>
-                <!-- <div class="col-lg-6 text-lg-end">
+                <div id="Hobbies" class="container-xxl py-6 pt-5" tabindex="0">
+                    <div class="container pb100">
+                        <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="col-lg-6">
+                                <h1 class="display-5 mb-0">Hobbies & Experiences</h1>
+                            </div>
+                            <!-- <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="hobbies-flters">
                         <li class="mx-3 active" data-filter="*">All </li>
                         <li class="mx-3" data-filter=".first">Sports</li>
@@ -628,8 +823,8 @@
                     </ul>
                 </div>
             </div> -->
-                <div class="row g-5 hobbies-container wow fadeInUp" data-wow-delay="0.1s">
-                    <!-- <div class="hobbies-item second">
+                            <div class="row g-5 hobbies-container wow fadeInUp" data-wow-delay="0.1s">
+                                <!-- <div class="hobbies-item second">
                     <div class="hobbies-content">
                         <div class="hobbies-img rounded overflow-hidden">
                             <img class="img-fluid align-items-center rounded mx-auto" src="img/Hobbies/skydive.jpg"alt="">
@@ -716,9 +911,7 @@
                 <div class="hobbies-item">
                     <div class="hobbies-description">
                         <h3>Paintballing</h3>
-                        <p>I prefer airsoft because of the smaller masks, and wider varity of guns and being able to
-                            reload easily. I enjoy paintballing for the satisfaction of seeing the paint splatter on
-                            someone, don't recomend playing in winter however, hurts much more.</p>
+                        <p>I prefer airsoft because of the smaller masks, and wider variety of guns and being able to reload easily. I enjoy paintballing for the satisfaction of seeing the paint splatter on someone, don't recommend playing in winter however, hurts much more.</p>
                     </div>
                     <div class="hobbies-content">
                         <div class="hobbies-img rounded overflow-hidden">
@@ -741,196 +934,251 @@
                     </div>
                 </div> -->
 
-                    <!-- Flickity HTML init -->
-                    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "contain": true }'>
-                        <div class="hobbies-item">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded mx-auto"
-                                        src="img/Hobbies/skydive.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>SkyDiving</h3>
-                                <p>Skydiving is an exhilarating experience that defies gravity and pushes your
-                                    boundaries. As I stood on the ground, the anticipation built, but it wasn't until I
-                                    was up in the plane, feeling the temperature drop and hearing the wind whistle by,
-                                    that the reality of what I was about to do truly set in. Nerves gripped me as I
-                                    prepared to take the leap into the unknown. The initial freefall through thick
-                                    clouds felt like being pelted with ice needles, but once we emerged, the
-                                    breathtaking view and the sensation of gliding with the parachute made it all worth
-                                    it. Despite the initial fear, the thrill of skydiving left me eager to do it again
-                                    in my lifetime. </p>
-                            </div>
-                        </div>
-                        <div class="hobbies-item ">
-                            <div class=" ">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded " src="img/Hobbies/caving.jpg"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>Caving</h3>
-                                <p>Despite my skepticism due to some claustrophobia, I ventured into the depths of a
-                                    cave. The confined spaces initially made me uneasy, but as I delved deeper, I found
-                                    myself immersed in the unique beauty and tranquility of the underground world.
-                                    Overcoming my fear, I navigated through narrow passages and marveled at the
-                                    intricate formations that time had sculpted. Though challenging, the experience of
-                                    caving left me with a newfound appreciation for nature's hidden wonders.</p>
-                            </div>
-                        </div>
-                        <div class="hobbies-item ">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded" src="img/Hobbies/climbing.jpg"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>Bouldering and Climbing</h3>
-                                <p>Despite my fear of falling, I find solace in the ascent. Bouldering and climbing
-                                    offer a physical and mental challenge unlike any other. As I scale rock faces and
-                                    navigate challenging routes, each move requires focus, determination, and trust in
-                                    myself and my abilities. Despite the occasional slip or setback, the sense of
-                                    accomplishment upon reaching the summit is unparalleled. Each climb pushes me to
-                                    overcome my fears and test my limits, making the journey to the top all the more
-                                    rewarding.</p>
-                            </div>
-                        </div>
-                        <div class="hobbies-item ">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded" src="img/Hobbies/biking.jpg"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>Cycling</h3>
-                                <p>Whether commuting to work, exploring scenic greenways, or tackling thrilling bike
-                                    parks, cycling has become a beloved hobby of mine. The freedom of movement, the rush
-                                    of wind against my face, and the ever-changing scenery make every ride an adventure.
-                                    Whether navigating bustling city streets or winding country roads, cycling allows me
-                                    to connect with my surroundings in a way that's both invigorating and meditative.
-                                    With each pedal stroke, I feel a sense of liberation and joy that keeps me coming
-                                    back for more.</p>
-                            </div>
-                        </div>
-                        <div class="hobbies-item ">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded" src="img/Hobbies/zipline.jpg"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>Ziplining</h3>
-                                <p>With a love for speed and adventure, ziplining offers an exhilarating rush unlike any
-                                    other. Soaring through the air at high speeds, suspended above breathtaking
-                                    landscapes, I feel a sense of freedom and exhilaration that's hard to replicate.
-                                    While the initial leap may be daunting, the adrenaline-fueled thrill of racing
-                                    through the air quickly erases any doubts or fears. As I zip along the line, taking
-                                    in panoramic views and feeling the wind rush past, I'm reminded of the sheer joy of
-                                    living life on the edge.</p>
-                            </div>
-                        </div>
-                        <div class="hobbies-item ">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded" src="img/Hobbies/quary karts.jpg"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div class="hobbies-description">
-                                <h3>Quary-Carting</h3>
-                                <p>Descending a quarry in a high-speed cart with no railings might seem daunting, but
-                                    the adrenaline rush is incomparable. The initial drop filled me with a mix of
-                                    excitement and trepidation, but as I gained speed and control, the fear melted away,
-                                    replaced by pure exhilaration. Drifting around corners and navigating the rugged
-                                    terrain was both challenging and immensely satisfying. Despite the heart-pounding
-                                    moments, the thrill of quarry-carting left me with memories that I'll cherish for a
-                                    lifetime.</p>
-                            </div>
-                        </div>
+                                <!-- Flickity HTML init -->
+                                <div class="gallery js-flickity"
+                                    data-flickity-options='{ "wrapAround": true, "contain": true }'>
+                                    <div class="hobbies-item">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded mx-auto"
+                                                    src="img/Hobbies/skydive.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>SkyDiving</h3>
+                                            <p>Skydiving is an exhilarating experience that defies gravity and pushes
+                                                your
+                                                boundaries. As I stood on the ground, the anticipation built, but it
+                                                wasn't until I
+                                                was up in the plane, feeling the temperature drop and hearing the wind
+                                                whistle by,
+                                                that the reality of what I was about to do truly set in. Nerves gripped
+                                                me as I
+                                                prepared to take the leap into the unknown. The initial freefall through
+                                                thick
+                                                clouds felt like being pelted with ice needles, but once we emerged, the
+                                                breathtaking view and the sensation of gliding with the parachute made
+                                                it all worth
+                                                it. Despite the initial fear, the thrill of skydiving left me eager to
+                                                do it again
+                                                in my lifetime. </p>
+                                        </div>
+                                    </div>
+                                    <div class="hobbies-item ">
+                                        <div class=" ">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded "
+                                                    src="img/Hobbies/caving.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Caving</h3>
+                                            <p>Despite my skepticism due to some claustrophobia, I ventured into the
+                                                depths of a
+                                                cave. The confined spaces initially made me uneasy, but as I delved
+                                                deeper, I found
+                                                myself immersed in the unique beauty and tranquility of the underground
+                                                world.
+                                                Overcoming my fear, I navigated through narrow passages and marveled at
+                                                the
+                                                intricate formations that time had sculpted. Though challenging, the
+                                                experience of
+                                                caving left me with a newfound appreciation for nature's hidden wonders.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="hobbies-item ">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/climbing.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Bouldering and Climbing</h3>
+                                            <p>Despite my fear of falling, I find solace in the ascent. Bouldering and
+                                                climbing
+                                                offer a physical and mental challenge unlike any other. As I scale rock
+                                                faces and
+                                                navigate challenging routes, each move requires focus, determination,
+                                                and trust in
+                                                myself and my abilities. Despite the occasional slip or setback, the
+                                                sense of
+                                                accomplishment upon reaching the summit is unparalleled. Each climb
+                                                pushes me to
+                                                overcome my fears and test my limits, making the journey to the top all
+                                                the more
+                                                rewarding.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hobbies-item ">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/biking.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Cycling</h3>
+                                            <p>Whether commuting to work, exploring scenic greenways, or tackling
+                                                thrilling bike
+                                                parks, cycling has become a beloved hobby of mine. The freedom of
+                                                movement, the rush
+                                                of wind against my face, and the ever-changing scenery make every ride
+                                                an adventure.
+                                                Whether navigating bustling city streets or winding country roads,
+                                                cycling allows me
+                                                to connect with my surroundings in a way that's both invigorating and
+                                                meditative.
+                                                With each pedal stroke, I feel a sense of liberation and joy that keeps
+                                                me coming
+                                                back for more.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hobbies-item ">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/zipline.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Ziplining</h3>
+                                            <p>With a love for speed and adventure, ziplining offers an exhilarating
+                                                rush unlike any
+                                                other. Soaring through the air at high speeds, suspended above
+                                                breathtaking
+                                                landscapes, I feel a sense of freedom and exhilaration that's hard to
+                                                replicate.
+                                                While the initial leap may be daunting, the adrenaline-fueled thrill of
+                                                racing
+                                                through the air quickly erases any doubts or fears. As I zip along the
+                                                line, taking
+                                                in panoramic views and feeling the wind rush past, I'm reminded of the
+                                                sheer joy of
+                                                living life on the edge.</p>
+                                        </div>
+                                    </div>
+                                    <div class="hobbies-item ">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/quary karts.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Quary-Carting</h3>
+                                            <p>Descending a quarry in a high-speed cart with no railings might seem
+                                                daunting, but
+                                                the adrenaline rush is incomparable. The initial drop filled me with a
+                                                mix of
+                                                excitement and trepidation, but as I gained speed and control, the fear
+                                                melted away,
+                                                replaced by pure exhilaration. Drifting around corners and navigating
+                                                the rugged
+                                                terrain was both challenging and immensely satisfying. Despite the
+                                                heart-pounding
+                                                moments, the thrill of quarry-carting left me with memories that I'll
+                                                cherish for a
+                                                lifetime.</p>
+                                        </div>
+                                    </div>
 
-                        <div class="hobbies-item">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded"
-                                        src="img/Hobbies/paintablling.jpeg" alt="">
+                                    <div class="hobbies-item">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/paintablling.jpeg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="hobbies-description">
+                                            <h3>Paintballing</h3>
+                                            <p>Engaging in strategic combat with paintball guns provides an
+                                                adrenaline-pumping
+                                                experience unlike any other. The satisfaction of seeing paint splatter
+                                                on opponents
+                                                amidst intense skirmishes is truly exhilarating. While I enjoy the
+                                                fast-paced action
+                                                of paintballing, I find myself drawn to airsoft for its smaller masks,
+                                                wider variety
+                                                of guns, and tactical gameplay. Whether dodging paintballs or
+                                                coordinating maneuvers
+                                                with teammates, the thrill of simulated combat never fails to get my
+                                                heart racing.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="hobbies-item">
+                                        <div class="">
+                                            <div class="hobbies-img rounded overflow-hidden">
+                                                <img class="img-fluid align-items-center rounded"
+                                                    src="img/Hobbies/me.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-description">
+                                            <h3>Airsoft</h3>
+                                            <p>Among my favorite hobbies, airsoft combines physical activity with
+                                                strategic gameplay
+                                                for an immersive and thrilling experience. Running through diverse
+                                                terrain, dodging
+                                                incoming fire, and outmaneuvering opponents requires quick thinking and
+                                                teamwork.
+                                                Despite the sting of getting hit, the adrenaline rush of intense
+                                                firefights and the
+                                                satisfaction of executing successful maneuvers make every match
+                                                unforgettable. With
+                                                a wide array of guns and playstyles to choose from, airsoft offers
+                                                endless
+                                                opportunities for excitement and camaraderie.</p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="hobbies-description">
-                                <h3>Paintballing</h3>
-                                <p>Engaging in strategic combat with paintball guns provides an adrenaline-pumping
-                                    experience unlike any other. The satisfaction of seeing paint splatter on opponents
-                                    amidst intense skirmishes is truly exhilarating. While I enjoy the fast-paced action
-                                    of paintballing, I find myself drawn to airsoft for its smaller masks, wider variety
-                                    of guns, and tactical gameplay. Whether dodging paintballs or coordinating maneuvers
-                                    with teammates, the thrill of simulated combat never fails to get my heart racing.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="hobbies-item">
-                            <div class="">
-                                <div class="hobbies-img rounded overflow-hidden">
-                                    <img class="img-fluid align-items-center rounded" src="img/Hobbies/me.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="portfolio-description">
-                                <h3>Airsoft</h3>
-                                <p>Among my favorite hobbies, airsoft combines physical activity with strategic gameplay
-                                    for an immersive and thrilling experience. Running through diverse terrain, dodging
-                                    incoming fire, and outmaneuvering opponents requires quick thinking and teamwork.
-                                    Despite the sting of getting hit, the adrenaline rush of intense firefights and the
-                                    satisfaction of executing successful maneuvers make every match unforgettable. With
-                                    a wide array of guns and playstyles to choose from, airsoft offers endless
-                                    opportunities for excitement and camaraderie.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!--******************************************************************-->
+                            <!--******************************************************************-->
 
 
 
-                <!-- Contact Start -->
-                <div class="container-xxl pb-5" id="Contact">
-                    <div class="container py-5">
-                        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="col-lg-6">
-                                <h1 class="display-5 mb-0">Let's Work Together</h1>
-                            </div>
-                        </div>
-                        <div class="row g-5">
-                            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="mb-2">You can find me in:</p>
-                                <h3 class="fw-bold">Chester, Chesire</h3>
-                                <hr class="w-100">
-                                <p class="mb-2">Call me:</p>
-                                <h3 class="fw-bold">07518502040</h3>
-                                <hr class="w-100">
-                                <p class="mb-2">Or Mail me:</p>
-                                <h3 class="fw-bold">karchuti@gmail.com</h3>
-                                <hr class="w-100">
-                                <p class="mb-2">Check me out on:</p>
-                                <div class="d-flex pt-2">
-                                    <a href="https://www.linkedin.com/in/karchuti"> <img src="img/Icons/liknedIn-removebg-preview.png"alt=""></a>
-                                </div>
-                                <p class="mb-2">Download CV::</p>
-                                <a href="IgorKarchutCV.pdf"> <img src="img/Icons/CVIcon-removebg-preview.png"></a>
-                            </div>
-                            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="container-xxl  px-0 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="container-xxl  px-0">
-                                        <div class="bg-dark">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45487.396219044094!2d-2.9064527325067453!3d53.18849525152549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ac1d9629cf569%3A0x49626cb38dd8f89f!2sChester!5e0!3m2!1sen!2suk!4v1697463119266!5m2!1sen!2suk"
-                                                frameborder="0" style="width: 100%; height: 450px; border:0;"
-                                                allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            <!-- Contact Start -->
+                            <div id="Contact" class="container-xxl pb-5" tabindex="0">
+                                <div class="container py-5">
+                                    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="col-lg-6">
+                                            <h1 class="display-5 mb-0">Let's Work Together</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row g-5">
+                                        <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                            <p class="mb-2">You can find me in:</p>
+                                            <h3 class="fw-bold">Chester, Chesire</h3>
+                                            <hr class="w-100">
+                                            <p class="mb-2">Call me:</p>
+                                            <h3 class="fw-bold">07518502040</h3>
+                                            <hr class="w-100">
+                                            <p class="mb-2">Or Mail me:</p>
+                                            <h3 class="fw-bold">karchuti@gmail.com</h3>
+                                            <hr class="w-100">
+                                            <p class="mb-2">Check me out on:</p>
+                                            <div class="d-flex pt-2">
+                                                <a href="https://www.linkedin.com/in/karchuti"> <img
+                                                        src="img/Icons/liknedIn-removebg-preview.png" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                            <div class="container-xxl  px-0 wow fadeInUp" data-wow-delay="0.1s">
+                                                <div class="container-xxl  px-0">
+                                                    <div class="bg-dark">
+                                                        <iframe
+                                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45487.396219044094!2d-2.9064527325067453!3d53.18849525152549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ac1d9629cf569%3A0x49626cb38dd8f89f!2sChester!5e0!3m2!1sen!2suk!4v1697463119266!5m2!1sen!2suk"
+                                                            frameborder="0"
+                                                            style="width: 100%; height: 450px; border:0;"
+                                                            allowfullscreen="" aria-hidden="false"
+                                                            tabindex="0"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -938,24 +1186,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display: none;"><i
-            class="bi bi-arrow-up"></i></a>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display: none;"><i
+                        class="bi bi-arrow-up"></i></a>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="lib/wow/wow.min.js"></script>
+                <script src="lib/easing/easing.min.js"></script>
+                <script src="lib/waypoints/waypoints.min.js"></script>
+                <script src="lib/typed/typed.min.js"></script>
+                <script src="lib/counterup/counterup.min.js"></script>
+                <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                <script src="lib/isotope/isotope.pkgd.min.js"></script>
+                <script src="lib/lightbox/js/lightbox.min.js"></script>
+                <script src="js/main.js"></script>
+                <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
+                <!-- Remove custom JS that forcibly sets .active on nav links -->
+
+                <!-- Initialize Bootstrap ScrollSpy with correct offset -->
+                <script>
+                    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                        target: '.navbar',
+                        offset: 80 // Adjust if your navbar is taller/shorter
+                    });
+
+                    // Removed custom nav highlight reset after clicking back-to-top; let ScrollSpy handle it.
+                </script>
 </body>
 
 </html>

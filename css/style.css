@@ -1,4 +1,3 @@
-
 .back-button {
     position: fixed;
     /* No changes needed for other styles */
@@ -20,12 +19,93 @@
 }
 body{
     color: #000000;
+    margin: 0;
+    padding: 0;
 }
-.prof{
-    background: url(../img/Banners/t5-removebg-preview.png)  no-repeat; 
+#About {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Adds a strong dark shadow */
+    background: url(../img/Banners/t7.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Optional: for a parallax effect */
+    position: relative;
+    z-index: 1;
+    margin-top: 0 !important;
+    padding-top: 30px; /* Move content even higher */
+}
+
+/* Add overlay for better text contrast */
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(20, 20, 40, 0.55); /* dark blue/black overlay */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Ensure content is above overlay */
+#About > .container,
+#About > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Style for About section <p> text */
+.about-text-bg {
+    background: rgba(20, 20, 40, 0.75); /* semi-transparent dark */
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    /* Optional: add a border for extra contrast */
+    /* border: 1px solid rgba(255,255,255,0.08); */
+}
+
+/* Responsive: reduce padding on mobile */
+@media (max-width: 767.98px) {
+    #About::before {
+        background: rgba(20, 20, 40, 0.7);
+    }
+    .about-text-bg {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+    /* Profile image: max 90vw, max 120px, never exceeds phone width */
+    #About .prof img {
+        width: 90vw;
+        max-width: 90vw;
+        min-width: 60px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    /* Skills: 2 per row */
+    .skills-container .skill-item {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box;
+    }
+    .skills-container .portfolio-img img {
+        width: 48px !important;
+        max-width: 48px !important;
+        height: 48px !important;
+        max-height: 48px !important;
+    }
+}
+.prof {
+    background: none; /* Remove background from .prof */
 }
 .skills-container{
     justify-content: center;
+    align-items: center; /* Ensure vertical alignment */
 }
 /********** Template CSS **********/
 .skills-list {
@@ -44,9 +124,14 @@ body{
 }
 :root {
     --primary: #204ACB;
-    --secondary: ##E9CE7C;
+    --secondary: #E9CE7C;
     --light: #FAFAFB;
     --dark: #12141D;
+}
+
+/* Global box-sizing for easier layout control */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 .back-to-top {
     position: fixed;
@@ -121,23 +206,79 @@ body{
     padding: 20px 15px;
     color: var(--dark);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: bold;
     outline: none;
+    text-shadow: 1px 2px 8px rgba(32,74,203,0.18), 0 1px 2px rgba(0,0,0,0.12);
 }
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: var(--primary);
 }
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link {
-        padding: 10px 0;
-    }
+
+/* Navbar starts invisible, only fades in when scrolled */
+.navbar {
+    opacity: 0 !important;
+    pointer-events: none;
+    transition: opacity 1.2s cubic-bezier(.4,2,.3,1); /* increased from 0.5s to 1.2s */
 }
-.myBorder{
+.navbar.navbar-visible {
+    opacity: 1 !important;
+    pointer-events: auto;
+    transition: opacity 1.2s cubic-bezier(.4,2,.3,1); /* increased from 0.5s to 1.2s */
+}
+
+/* Pulsing down arrow and text - smaller, closer, fades out */
+#navbar-arrow-indicator {
+    position: fixed;
+    left: 0;
+    bottom: 0.1rem; /* moved even closer to the bottom */
+    width: 100vw;
+    z-index: 1040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#navbar-arrow-indicator .arrow-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #204ACB;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px #000; /* changed from #fff to #000 for black drop shadow */
+    margin-bottom: 0.02rem; /* reduce space between text and icon */
+    pointer-events: none;
+    background: rgba(233, 206, 124, 0.85); /* faded yellow */
+    border-radius: 8px;
+    padding: 0.2rem 0.8rem;
+}
+#navbar-arrow-indicator .arrow-down {
+    font-size: 1.5rem;
+    color: #204ACB;
+    animation: pulse-arrow 1.4s infinite;
+    filter: drop-shadow(0 2px 4px #fff);
+    pointer-events: none;
+    margin-top: 0;
+}
+@keyframes pulse-arrow {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    50% { transform: translateY(6px) scale(1.08); opacity: 0.7; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+#navbar-arrow-indicator.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+/* .myBorder{
     border: #204ACB;
     border-radius: 10px;
     border-style: solid;
-}
+} */
 /*** Header ***/
 
 .typed-cursor {
@@ -261,12 +402,28 @@ body{
 .portfolio-item {
     display: flex;
     flex-wrap: wrap;
-}
-.skill-item{
-    flex-wrap: wrap;
-    
+    align-items: stretch;
+    min-width: 0;
 }
 
+.portfolio-content,
+.portfolio-description {
+    flex: 1 1 50%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 991.98px) {
+    .portfolio-item {
+        flex-direction: column;
+    }
+    .portfolio-content,
+    .portfolio-description {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
 
 .portfolio-content {
     flex: 1 1 50%; /* This will make the content take up 50% of the container */
@@ -578,3 +735,610 @@ body{
     font-size: 80px;
     color: white;
   }
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* space between icons */
+}
+.social-links a {
+    outline: none;
+}
+.social-links a:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}
+.social-links a img {
+    height: 40px; /* adjust as needed */
+    width: auto;
+    /* Reminder: Ensure all <img> have descriptive alt attributes for accessibility */
+}
+
+/* Double size for LinkedIn & CV icons in About section */
+#About .social-links a img {
+    height: 60px !important;
+    width: auto !important;
+}
+
+.text-blue {
+    color: white !important;
+}
+#About .prof {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+#About .prof img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 0;
+    /* Visually grow towards top right */
+    transform: scale(1.18) translate(10%, -8%);
+    /* Add a soft shadow for emphasis */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    /* Smooth out the scaling on resize */
+    transition: transform 0.3s cubic-bezier(.4,2,.3,1);
+}
+
+/* Responsive: Adjust image size and transform for smaller screens */
+@media (max-width: 1199.98px) {
+    #About .prof img {
+        max-width: 380px;
+        transform: scale(1.08) translate(6%, -4%);
+    }
+}
+@media (max-width: 991.98px) {
+    #About .prof img {
+        max-width: 480px;
+        width: 480px;
+        height: 480px;
+        min-width: 480px;
+        min-height: 480px;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        transform: scale(1) translate(0, 0);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #About .prof {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #About .prof img {
+        max-width: 480px;
+        width: 480px;
+        height: 480px;
+        min-width: 480px;
+        min-height: 480px;
+    }
+}
+
+/* Ensure the About row fills the section vertically */
+#About .row.align-items-center {
+    min-height: 500px;
+}
+
+/* Make skill icons default (large) size on desktop */
+.skills-container .portfolio-img img {
+    width: 96px !important;
+    max-width: 96px !important;
+    height: 96px !important;
+    max-height: 96px !important;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+/* On large screens, keep 5 per row */
+@media (min-width: 992px) {
+    .skills-container .skill-item {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* On tablet and below, make icons smaller and 2 per row on mobile */
+@media (max-width: 991.98px) {
+    .skills-container .portfolio-img img {
+        width: 60px !important;
+        max-width: 60px !important;
+        height: 60px !important;
+        max-height: 60px !important;
+    }
+}
+@media (max-width: 767.98px) {
+    #About .prof img {
+        width: 90vw;
+        max-width: 90vw;
+        min-width: 60px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    /* Skills: 2 per row */
+    .skills-container .skill-item {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        box-sizing: border-box;
+    }
+    .skills-container .portfolio-img img {
+        width: 48px !important;
+        max-width: 48px !important;
+        height: 48px !important;
+        max-height: 48px !important;
+    }
+}
+
+/* About overlay */
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(20, 20, 40, 0.55);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Skills section overlay */
+#Skills {
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+#Skills::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--overlay-darkblue, rgba(20, 20, 40, 0.55));
+    z-index: 2;
+    pointer-events: none;
+}
+#Skills > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Overlay for each .container-fluid.align-items-center in Skills section */
+#Skills .container-fluid.align-items-center {
+    position: relative;
+    z-index: 1;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+#Skills .container-fluid.align-items-center::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Blue-tinted overlay, more visible */
+    background: rgba(32, 74, 203, 0.32); /* #204ACB with 32% opacity */
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 16px;
+}
+#Skills .container-fluid.align-items-center > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Education & Experience overlay */
+#Experience {
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+#Experience::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--overlay-darkblue, rgba(20, 20, 40, 0.55));
+    z-index: 2;
+    pointer-events: none;
+}
+#Experience > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Showcase overlay */
+#Projects {
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+#Projects::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--overlay-darkblue, rgba(20, 20, 40, 0.55));
+    z-index: 2;
+    pointer-events: none;
+}
+#Projects > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Hobbies overlay */
+#Hobbies {
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+#Hobbies::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--overlay-darkblue, rgba(20, 20, 40, 0.55));
+    z-index: 2;
+    pointer-events: none;
+}
+#Hobbies > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Contact overlay */
+#Contact {
+    position: relative;
+    z-index: 1;
+    background: none;
+}
+#Contact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--overlay-darkblue, rgba(20, 20, 40, 0.55));
+    z-index: 2;
+    pointer-events: none;
+}
+#Contact > * {
+    position: relative;
+    z-index: 3;
+}
+
+/* Ensure text and content above overlay are readable */
+#Skills, #Experience, #Projects, #Hobbies, #Contact {
+    color: #fff;
+}
+#Skills .about-text-bg,
+#Experience .timeline-content,
+#Projects .portfolio-description,
+#Projects .portfolio-content,
+#Hobbies .hobbies-description,
+#Contact .container,
+#Contact .row,
+#Contact .col-lg-5,
+#Contact .col-md-6 {
+    color: #fff;
+}
+
+/* Optional: Add extra contrast for cards/boxes inside overlays */
+#Skills .about-text-bg,
+#Experience .timeline-content,
+#Projects .portfolio-description,
+#Projects .portfolio-content,
+#Hobbies .hobbies-description {
+    background: rgba(20, 20, 40, 0.75);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Remove overlays from Skills, Experience, Projects, Hobbies, Contact */
+#Skills::before,
+#Experience::before,
+#Projects::before,
+#Hobbies::before,
+#Contact::before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+}
+
+/* Remove overlay-related stacking context and background */
+#Skills,
+#Experience,
+#Projects,
+#Hobbies,
+#Contact {
+    position: static !important;
+    z-index: auto !important;
+    background: none !important;
+}
+
+/* Remove overlay-specific z-index for children */
+#Skills > *,
+#Experience > *,
+#Projects > *,
+#Hobbies > *,
+#Contact > * {
+    position: static !important;
+    z-index: auto !important;
+}
+
+/* Restore default text color for sections */
+#Skills,
+#Experience,
+#Projects,
+#Hobbies,
+#Contact {
+    color: inherit !important;
+}
+
+/* Restore default backgrounds for timeline and cards */
+#Experience .timeline-content,
+#Projects .portfolio-description,
+#Projects .portfolio-content,
+#Hobbies .hobbies-description {
+    background: #fff !important;
+    color: #000 !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Remove optional overlay backgrounds for cards/boxes */
+#Skills .about-text-bg,
+#Experience .timeline-content,
+#Projects .portfolio-description,
+#Projects .portfolio-content,
+#Hobbies .hobbies-description {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+/* Restore About overlay */
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(20, 20, 40, 0.55); /* dark blue/black overlay */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Timeline styles for Education & Experience */
+.timeline {
+    position: relative;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    min-height: 100px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 2rem 2rem 2rem 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    /* Will be animated in via JS */
+}
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+.timeline-item .timeline-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    min-width: 220px;
+    max-width: 90%;
+}
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 2rem;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    z-index: 3;
+}
+.timeline-item.left .timeline-dot {
+    right: -9px;
+}
+.timeline-item.right .timeline-dot {
+    left: -9px;
+}
+.timeline-item .timeline-date {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.timeline-item .timeline-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.timeline-item .timeline-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+.timeline-item ul,
+.timeline-item li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.timeline-item .timeline-content > ul,
+.timeline-item .timeline-content > li {
+    margin: 0 0 0.5rem 0;
+    padding-left: 0;
+}
+.timeline-item .timeline-description {
+    font-size: 0.98rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+}
+.timeline-tab-content {
+    margin-top: 2rem;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 991.98px) {
+    .timeline::before {
+        left: 8px;
+        transform: none;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 2.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .timeline-item .timeline-dot {
+        left: -1.5rem !important;
+        right: auto !important;
+    }
+}
+
+/* Add spacing between skills rows */
+#Skills .skills-container {
+    margin-bottom: 1.5rem;
+}
+#Skills .skills-container:last-child {
+    margin-bottom: 0;
+}
+
+/* Make skill text bold and add drop shadow */
+#Skills .skill-item p,
+#Skills .skill-item P {
+    font-weight: bold;
+    text-shadow: 1px 2px 8px rgba(32,74,203,0.25), 0 1px 2px rgba(0,0,0,0.18);
+    /* Optionally, increase font size for clarity */
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+}
+
+/* Timeline float-in animations */
+@keyframes timeline-fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes timeline-fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.timeline-item {
+    /* ...existing code... */
+    opacity: 0;
+    /* Will be animated in via JS */
+}
+.timeline-item.left.timeline-animate-in {
+    animation: timeline-fadeInLeft 0.8s cubic-bezier(.4,2,.3,1) forwards;
+}
+.timeline-item.right.timeline-animate-in {
+    animation: timeline-fadeInRight 0.8s cubic-bezier(.4,2,.3,1) forwards;
+}
+
+/* On mobile, animate from bottom for both sides for consistency */
+@media (max-width: 991.98px) {
+    @keyframes timeline-fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(60px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .timeline-item.timeline-animate-in {
+        animation: timeline-fadeInUp 0.8s cubic-bezier(.4,2,.3,1) forwards;
+    }
+}
+
+/* Overlay icons on profile image, bottom right */
+.profile-icons-overlay {
+    pointer-events: auto;
+    background: none !important; /* Remove background */
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    position: absolute;
+    /* Place at the bottom right of the image itself */
+    bottom: 0;
+    right: 0;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    gap: 16px;
+    z-index: 10;
+    /* Only show over the image area, not the whole .prof */
+    /* Make sure .prof is position:relative and image is block */
+}
+.profile-icons-overlay img {
+    height: 48px !important;
+    width: auto !important;
+    margin: 0;
+    transition: transform 0.15s;
+    background: none !important;
+}
+.profile-icons-overlay a:hover img {
+    transform: scale(1.08);
+}
+.profile-icons-inline,
+.profile-icons-inline-single {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.profile-icons-inline img,
+.profile-icons-inline-single img {
+    height: 32px !important;
+    width: auto !important;
+    margin: 0;
+    transition: transform 0.15s;
+    background: none !important;
+}
+.profile-icons-inline a:hover img,
+.profile-icons-inline-single a:hover img {
+    transform: scale(1.08);
+}
