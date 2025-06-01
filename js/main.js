@@ -184,4 +184,31 @@
         $(window).on('scroll', animateTimelineItems);
     });
 
+    // Uniform hobby card height for carousel
+    function setUniformHobbyCardHeight() {
+        var $carousel = $('.hobbies-carousel');
+        var $cards = $carousel.find('.hobby-card');
+        $cards.css('min-height', ''); // reset
+        // Find the "SkyDiving" card's height
+        var skydivingCard = $cards.filter(function () {
+            return $(this).find('h3').text().trim().toLowerCase() === 'skydiving';
+        });
+        var targetHeight = 0;
+        if (skydivingCard.length) {
+            targetHeight = skydivingCard.outerHeight();
+        } else {
+            // fallback: use tallest card
+            $cards.each(function () {
+                var h = $(this).outerHeight();
+                if (h > targetHeight) targetHeight = h;
+            });
+        }
+        if (targetHeight > 0) {
+            $cards.css('min-height', targetHeight + 'px');
+            $carousel.addClass('uniform-height');
+        }
+    }
+    $(window).on('resize', setUniformHobbyCardHeight);
+    $(document).ready(setUniformHobbyCardHeight);
+
 })(jQuery);
