@@ -2456,4 +2456,16 @@ body{
 }
 @media (max-width: 767.98px) {
     .hobby-card {
-        height: auto
+        height: auto;
+        min-height: 0;
+        max-height: none;
+    }
+}
+.timeline-dot {
+    position: relative; /* or absolute, depending on your layout */
+    z-index: 2;
+}
+.timeline-line {
+    position: relative; /* or absolute */
+    z-index: 1;
+}
