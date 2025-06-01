@@ -1794,3 +1794,23 @@ body{
         justify-content: flex-start;
     }
 }
+
+/* Highlight effect for timeline items (Education & Experience) - match Showcase */
+.timeline-item {
+    /* ...existing code... */
+    transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
+    border: 2px solid transparent;
+}
+.timeline-item:hover .timeline-content,
+.timeline-item:focus-within .timeline-content {
+    box-shadow: 0 6px 24px rgba(32,74,203,0.16), 0 2px 12px rgba(32,74,203,0.08);
+    border-color: #204ACB;
+    /* Optional: add a subtle scale effect */
+    transform: translateY(-4px) scale(1.025);
+    z-index: 3;
+}
+.timeline-item .timeline-content {
+    /* ...existing code... */
+    transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+    border: 2px solid transparent;
+}
