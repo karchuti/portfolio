@@ -464,10 +464,13 @@ body{
     border-color: var(--primary);
 }
 
-/* Showcase menu: add margin around each menu item */
+/* Center nav-link in nav-item for Showcase menu */
 #portfolio-flters li,
 #portfolio-flters .nav-link {
     margin: 0.25rem 0.4rem 0.25rem 0.4rem; /* top, right, bottom, left */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .pb100{
     padding-bottom: 100px;
