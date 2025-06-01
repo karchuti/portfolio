@@ -31,7 +31,7 @@ body{
     position: relative;
     z-index: 1;
     margin-top: 0 !important;
-    padding-top: 30px; /* Move content even higher */
+    padding-top: 10px !important;
 }
 
 /* Add overlay for better text contrast */
@@ -822,9 +822,6 @@ body{
     max-width: 96px !important;
     height: 96px !important;
     max-height: 96px !important;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
 }
 
 /* On large screens, keep 5 per row */
@@ -1338,8 +1335,8 @@ body{
 .about-fullscreen {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding-top: 80px !important; /* height of navbar */
+    align-items: flex-start;
+    padding-top: 60px !important; /* reduced from 80px */
     padding-bottom: 0 !important;
     margin-top: 0 !important;
 }
@@ -1709,12 +1706,6 @@ body{
         height: 38px;
         font-size: 1.3rem;
     }
-    .hobbies-carousel-scrollbar {
-        height: 8px;
-    }
-    .hobbies-carousel-thumb {
-        border-radius: 4px;
-    }
 }
 
 /* --- Uniform hobby card height based on tallest card (no text cutoff) --- */
@@ -1771,5 +1762,35 @@ body{
         height: auto;
         min-height: 0;
         max-height: none;
+    }
+}
+.about-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 2.2rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+.about-contact-item {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+/* Float LinkedIn and Download (CV) to the right in their rows */
+.about-contact-item.float-right {
+    justify-content: flex-end;
+}
+
+/* Stack to 1 column, 4 rows below 1000px */
+@media (max-width: 1000px) {
+    .about-contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 1rem 0;
+    }
+    .about-contact-item,
+    .about-contact-item.float-right {
+        justify-content: flex-start;
     }
 }
