@@ -154,7 +154,6 @@
         if ($('#navbar-arrow-indicator').length === 0) {
             $('body').prepend(
                 '<div id="navbar-arrow-indicator">' +
-                    '<div class="arrow-text">Scroll down to explore</div>' +
                     '<span class="arrow-down">&#x25BC;</span>' +
                 '</div>'
             );
