@@ -1128,7 +1128,7 @@ body{
     height: 100%;
     background: var(--primary);
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 0 !important; /* Lower the line's stacking order */
 }
 .timeline-item {
     position: relative;
@@ -1157,9 +1157,10 @@ body{
     min-width: 220px;
     max-width: 90%;
 }
-.timeline-item .timeline-dot {
-    position: absolute;
-    top: 2rem;
+.timeline-item .timeline-dot,
+.timeline-dot {
+    position: absolute !important;
+    z-index: 10 !important;
     width: 18px;
     height: 18px;
     background: var(--secondary);
@@ -2237,235 +2238,241 @@ body{
         max-height: none;
     }
 }
-.about-contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem 2.2rem;
-    margin-bottom: 1.5rem;
-    align-items: center;
+.timeline {
+    position: relative;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    min-height: 100px;
 }
-.about-contact-item {
-    display: flex;
-    align-items: center;
-    min-width: 0;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    transform: translateX(-50%);
+    z-index: 0 !important; /* Lower the line's stacking order */
 }
-
-/* Float LinkedIn and Download (CV) to the right in their rows */
-.about-contact-item.float-right {
-    justify-content: flex-end;
-}
-
-/* Stack to 1 column, 4 rows below 1000px */
-@media (max-width: 1000px) {
-    .about-contact-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
-        gap: 1rem 0;
-    }
-    .about-contact-item,
-    .about-contact-item.float-right {
-        justify-content: flex-start;
-    }
-}
-
-/* Highlight effect for timeline items (Education & Experience) - match Showcase */
 .timeline-item {
-    transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
-    border: 2px solid transparent;
+    position: relative;
+    width: 50%;
+    padding: 2rem 2rem 2rem 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    /* Will be animated in via JS */
 }
-.timeline-item:hover .timeline-content,
-.timeline-item:focus-within .timeline-content {
-    box-shadow: 0 6px 24px rgba(32,74,203,0.16), 0 2px 12px rgba(32,74,203,0.08);
-    border-color: #204ACB;
-    /* Optional: add a subtle scale effect */
-    transform: translateY(-4px) scale(1.025);
-    z-index: 3;
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
 }
 .timeline-item .timeline-content {
-    transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
-    border: 2px solid transparent;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    min-width: 220px;
+    max-width: 90%;
 }
-
-/* Menu highlight on hover for Education & Experience nav (match Showcase) */
-#experience-flters li,
-#experience-flters .nav-link {
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-}
-#experience-flters li:hover,
-#experience-flters .nav-link:hover,
-#experience-flters li.active,
-#experience-flters .nav-link.active {
-    color: var(--primary);
-    border-color: var(--primary);
-    background: rgba(32,74,203,0.07);
-}
-
-/* Make the hobbies carousel larger and fix squished buttons */
-.hobbies-carousel-wrapper {
-    max-width: 1600px;
-    min-height: 1000px;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    gap: 2.5rem;
-    /* Prevent buttons from being squished by allowing wrapping and spacing */
-    flex-wrap: nowrap;
-}
-.hobbies-carousel-outer {
-    max-width: 1400px;
-    flex: 1 1 auto;
-    min-width: 0;
-}
-.hobbies-carousel {
-    gap: 2.5rem;
-    min-height: 700px;
-    flex: 1 1 auto;
-    min-width: 0;
-}
-.hobby-card {
-    min-width: 420px;
-    max-width: 480px;
-    flex: 0 0 420px;
-    height: 520px;
-    min-height: 520px;
-    max-height: 520px;
-    font-size: 1.15rem;
-}
-.hobby-img {
-    height: 260px;
-}
-.hobby-body {
-    padding: 2rem 2rem 1.5rem 2rem;
-    font-size: 1.15rem;
-}
-/* Ensure carousel buttons are not squished and always visible */
-.hobby-carousel-btn {
-    flex: 0 0 auto !important;
-    min-width: 44px;
-    min-height: 44px;
-    margin-top: 0;
-    margin-bottom: 0;
-    align-self: center;
+.timeline-item .timeline-dot,
+.timeline-dot {
+    position: absolute !important;
+    z-index: 10 !important;
+    width: 18px;
+    height: 18px;
+    background: var(--secondary);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
     z-index: 3;
 }
+.timeline-item.left .timeline-dot {
+    right: -9px;
+}
+.timeline-item.right .timeline-dot {
+    left: -9px;
+}
+.timeline-item .timeline-date {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.timeline-item .timeline-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.timeline-item .timeline-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+.timeline-item ul,
+.timeline-item li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.timeline-item .timeline-content > ul,
+.timeline-item .timeline-content > li {
+    margin: 0 0 0.5rem 0;
+    padding-left: 0;
+}
+.timeline-item .timeline-description {
+    font-size: 0.98rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+}
+.timeline-tab-content {
+    margin-top: 2rem;
+}
 
-/* On small screens, allow carousel to scroll and buttons to stay visible */
+/* Responsive: stack vertically on small screens */
 @media (max-width: 991.98px) {
-    .hobbies-carousel-wrapper {
-        flex-wrap: wrap;
-        min-height: unset;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+    .timeline::before {
+        left: 8px;
+        transform: none;
     }
-    .hobbies-carousel-outer {
-        max-width: 98vw;
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 2.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 2rem;
     }
-    .hobbies-carousel {
-        min-height: unset;
-        gap: 1rem;
-    }
-    .hobby-card {
-        min-width: 260px;
-        max-width: 280px;
-        flex-basis: 260px;
-        height: 300px;
-        min-height: 300px;
-        max-height: 300px;
-    }
-    .hobby-img {
-        height: 120px;
-    }
-    .hobby-body {
-        padding: 1rem 0.75rem 0.75rem 0.75rem;
-        font-size: 1rem;
-    }
-    .hobby-carousel-btn {
-        min-width: 38px;
-        min-height: 38px;
-    }
-}
-@media (max-width: 767.98px) {
-    .hobbies-carousel-wrapper {
-        gap: 0.7rem;
-        min-height: unset;
-    }
-    .hobby-card {
-        min-width: 90vw;
-        max-width: 95vw;
-        flex-basis: 90vw;
-        height: 220px;
-        min-height: 220px;
-        max-height: 220px;
-    }
-    .hobby-img {
-        height: 90px;
-    }
-    .hobby-body {
-        padding: 1rem 0.75rem 0.75rem 0.75rem;
-        font-size: 0.98rem;
-    }
-    .hobby-carousel-btn {
-        min-width: 32px;
-        min-height: 32px;
+    .timeline-item .timeline-dot {
+        left: -1.5rem !important;
+        right: auto !important;
     }
 }
 
-/* --- Uniform hobby card height based on tallest card (no text cutoff) --- */
-.hobbies-carousel {
-    align-items: stretch;
+/* Add spacing between skills rows */
+#Skills .skills-container {
+    margin-bottom: 1.5rem;
 }
-.hobby-card {
-    height: auto;
-    min-height: 0;
-    max-height: none;
+#Skills .skills-container:last-child {
+    margin-bottom: 0;
 }
 
-/* Make all hobby-cards in the carousel the same height as the tallest */
-.hobbies-carousel {
-    align-items: stretch;
-}
-.hobbies-carousel .hobby-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Ensure all hobby-cards have the same height as the tallest card in the group */
-.hobbies-carousel {
-    display: flex;
-    align-items: stretch;
-}
-.hobbies-carousel .hobby-card {
-    /* Use JS to set min-height dynamically, but as a fallback, use min-height: inherit */
-    min-height: inherit;
+/* Make skill text bold and add drop shadow */
+#Skills .skill-item p,
+#Skills .skill-item P {
+    font-weight: bold;
+    text-shadow: 1px 2px 8px rgba(32,74,203,0.25), 0 1px 2px rgba(0,0,0,0.18);
+    /* Optionally, increase font size for clarity */
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
 }
 
-/* Add this utility class for JS to set the height dynamically */
-.hobbies-carousel.uniform-height .hobby-card {
-    min-height: var(--hobby-card-max-height, auto);
+/* Timeline float-in animations */
+@keyframes timeline-fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes timeline-fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.timeline-item {
+    /* ...existing code... */
+    opacity: 0;
+    /* Will be animated in via JS */
+}
+.timeline-item.left.timeline-animate-in {
+    animation: timeline-fadeInLeft 0.8s cubic-bezier(.4,2,.3,1) forwards;
+}
+.timeline-item.right.timeline-animate-in {
+    animation: timeline-fadeInRight 0.8s cubic-bezier(.4,2,.3,1) forwards;
 }
 
-/* Responsive: remove fixed height for .hobby-card on all breakpoints */
+/* On mobile, animate from bottom for both sides for consistency */
 @media (max-width: 991.98px) {
-    .hobby-card {
-        height: auto;
-        min-height: 0;
-        max-height: none;
+    @keyframes timeline-fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(60px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .timeline-item.timeline-animate-in {
+        animation: timeline-fadeInUp 0.8s cubic-bezier(.4,2,.3,1) forwards;
     }
 }
-@media (max-width: 767.98px) {
-    .hobby-card {
-        height: auto;
-        min-height: 0;
-        max-height: none;
-    }
+
+/* Overlay icons on profile image, bottom right */
+.profile-icons-overlay {
+    pointer-events: auto;
+    background: none !important; /* Remove background */
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    position: absolute;
+    /* Place at the bottom right of the image itself */
+    bottom: 0;
+    right: 0;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    gap: 16px;
+    z-index: 10;
+    /* Only show over the image area, not the whole .prof */
+    /* Make sure .prof is position:relative and image is block */
 }
-.timeline-dot {
-    position: relative; /* or absolute, depending on your layout */
-    z-index: 2;
+.profile-icons-overlay img {
+    height: 48px !important;
+    width: auto !important;
+    margin: 0;
+    transition: transform 0.15s;
+    background: none !important;
 }
-.timeline-line {
-    position: relative; /* or absolute */
-    z-index: 1;
+.profile-icons-overlay a:hover img {
+    transform: scale(1.08);
 }
+.profile-icons-inline,
+.profile-icons-inline-single {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.profile-icons-inline img,
+.profile-icons-inline-single img {
+    height: 32px !important;
+    width: auto !important;
+    margin: 0;
+    transition: transform 0.15s;
+    background: none !important;
+}
+.profile-icons-inline a:hover img,
+.profile-icons-inline-single a:hover img {
+    transform: scale(1.08);
+}
+
+/* About section: fill viewport height minus navbar */
+.about-fullscreen {
+    min-height
